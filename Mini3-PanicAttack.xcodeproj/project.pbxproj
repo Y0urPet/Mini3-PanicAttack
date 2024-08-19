@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BA883062C73AE45008365C8 /* Mini3_PanicAttackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883052C73AE45008365C8 /* Mini3_PanicAttackApp.swift */; };
+		2BA883082C73AE45008365C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883072C73AE45008365C8 /* ContentView.swift */; };
+		2BA8830A2C73AE46008365C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883092C73AE46008365C8 /* Assets.xcassets */; };
+		2BA8830D2C73AE46008365C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA8830C2C73AE46008365C8 /* Preview Assets.xcassets */; };
+		2BA883172C73AE46008365C8 /* Mini3_PanicAttackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883162C73AE46008365C8 /* Mini3_PanicAttackTests.swift */; };
+		2BA883212C73AE46008365C8 /* Mini3_PanicAttackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883202C73AE46008365C8 /* Mini3_PanicAttackUITests.swift */; };
+		2BA883232C73AE46008365C8 /* Mini3_PanicAttackUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883222C73AE46008365C8 /* Mini3_PanicAttackUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BA883132C73AE46008365C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA882FA2C73AE45008365C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BA883012C73AE45008365C8;
+			remoteInfo = "Mini3-PanicAttack";
+		};
+		2BA8831D2C73AE46008365C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA882FA2C73AE45008365C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BA883012C73AE45008365C8;
+			remoteInfo = "Mini3-PanicAttack";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2BA883022C73AE45008365C8 /* Mini3-PanicAttack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini3-PanicAttack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA883052C73AE45008365C8 /* Mini3_PanicAttackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini3_PanicAttackApp.swift; sourceTree = "<group>"; };
+		2BA883072C73AE45008365C8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2BA883092C73AE46008365C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BA8830C2C73AE46008365C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2BA883122C73AE46008365C8 /* Mini3-PanicAttackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mini3-PanicAttackTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA883162C73AE46008365C8 /* Mini3_PanicAttackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini3_PanicAttackTests.swift; sourceTree = "<group>"; };
+		2BA8831C2C73AE46008365C8 /* Mini3-PanicAttackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mini3-PanicAttackUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BA883202C73AE46008365C8 /* Mini3_PanicAttackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini3_PanicAttackUITests.swift; sourceTree = "<group>"; };
+		2BA883222C73AE46008365C8 /* Mini3_PanicAttackUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini3_PanicAttackUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BA882FF2C73AE45008365C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA8830F2C73AE46008365C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA883192C73AE46008365C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BA882F92C73AE45008365C8 = {
+			isa = PBXGroup;
+			children = (
+				2BA883042C73AE45008365C8 /* Mini3-PanicAttack */,
+				2BA883152C73AE46008365C8 /* Mini3-PanicAttackTests */,
+				2BA8831F2C73AE46008365C8 /* Mini3-PanicAttackUITests */,
+				2BA883032C73AE45008365C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BA883032C73AE45008365C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BA883022C73AE45008365C8 /* Mini3-PanicAttack.app */,
+				2BA883122C73AE46008365C8 /* Mini3-PanicAttackTests.xctest */,
+				2BA8831C2C73AE46008365C8 /* Mini3-PanicAttackUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BA883042C73AE45008365C8 /* Mini3-PanicAttack */ = {
+			isa = PBXGroup;
+			children = (
+				2BA883052C73AE45008365C8 /* Mini3_PanicAttackApp.swift */,
+				2BA883072C73AE45008365C8 /* ContentView.swift */,
+				2BA883092C73AE46008365C8 /* Assets.xcassets */,
+				2BA8830B2C73AE46008365C8 /* Preview Content */,
+			);
+			path = "Mini3-PanicAttack";
+			sourceTree = "<group>";
+		};
+		2BA8830B2C73AE46008365C8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2BA8830C2C73AE46008365C8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2BA883152C73AE46008365C8 /* Mini3-PanicAttackTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BA883162C73AE46008365C8 /* Mini3_PanicAttackTests.swift */,
+			);
+			path = "Mini3-PanicAttackTests";
+			sourceTree = "<group>";
+		};
+		2BA8831F2C73AE46008365C8 /* Mini3-PanicAttackUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2BA883202C73AE46008365C8 /* Mini3_PanicAttackUITests.swift */,
+				2BA883222C73AE46008365C8 /* Mini3_PanicAttackUITestsLaunchTests.swift */,
+			);
+			path = "Mini3-PanicAttackUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BA883012C73AE45008365C8 /* Mini3-PanicAttack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA883262C73AE46008365C8 /* Build configuration list for PBXNativeTarget "Mini3-PanicAttack" */;
+			buildPhases = (
+				2BA882FE2C73AE45008365C8 /* Sources */,
+				2BA882FF2C73AE45008365C8 /* Frameworks */,
+				2BA883002C73AE45008365C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mini3-PanicAttack";
+			productName = "Mini3-PanicAttack";
+			productReference = 2BA883022C73AE45008365C8 /* Mini3-PanicAttack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BA883112C73AE46008365C8 /* Mini3-PanicAttackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA883292C73AE46008365C8 /* Build configuration list for PBXNativeTarget "Mini3-PanicAttackTests" */;
+			buildPhases = (
+				2BA8830E2C73AE46008365C8 /* Sources */,
+				2BA8830F2C73AE46008365C8 /* Frameworks */,
+				2BA883102C73AE46008365C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BA883142C73AE46008365C8 /* PBXTargetDependency */,
+			);
+			name = "Mini3-PanicAttackTests";
+			productName = "Mini3-PanicAttackTests";
+			productReference = 2BA883122C73AE46008365C8 /* Mini3-PanicAttackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BA8831B2C73AE46008365C8 /* Mini3-PanicAttackUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BA8832C2C73AE46008365C8 /* Build configuration list for PBXNativeTarget "Mini3-PanicAttackUITests" */;
+			buildPhases = (
+				2BA883182C73AE46008365C8 /* Sources */,
+				2BA883192C73AE46008365C8 /* Frameworks */,
+				2BA8831A2C73AE46008365C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BA8831E2C73AE46008365C8 /* PBXTargetDependency */,
+			);
+			name = "Mini3-PanicAttackUITests";
+			productName = "Mini3-PanicAttackUITests";
+			productReference = 2BA8831C2C73AE46008365C8 /* Mini3-PanicAttackUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BA882FA2C73AE45008365C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					2BA883012C73AE45008365C8 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					2BA883112C73AE46008365C8 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 2BA883012C73AE45008365C8;
+					};
+					2BA8831B2C73AE46008365C8 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 2BA883012C73AE45008365C8;
+					};
+				};
+			};
+			buildConfigurationList = 2BA882FD2C73AE45008365C8 /* Build configuration list for PBXProject "Mini3-PanicAttack" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BA882F92C73AE45008365C8;
+			productRefGroup = 2BA883032C73AE45008365C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BA883012C73AE45008365C8 /* Mini3-PanicAttack */,
+				2BA883112C73AE46008365C8 /* Mini3-PanicAttackTests */,
+				2BA8831B2C73AE46008365C8 /* Mini3-PanicAttackUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BA883002C73AE45008365C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA8830D2C73AE46008365C8 /* Preview Assets.xcassets in Resources */,
+				2BA8830A2C73AE46008365C8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA883102C73AE46008365C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA8831A2C73AE46008365C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BA882FE2C73AE45008365C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA883082C73AE45008365C8 /* ContentView.swift in Sources */,
+				2BA883062C73AE45008365C8 /* Mini3_PanicAttackApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA8830E2C73AE46008365C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA883172C73AE46008365C8 /* Mini3_PanicAttackTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BA883182C73AE46008365C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BA883212C73AE46008365C8 /* Mini3_PanicAttackUITests.swift in Sources */,
+				2BA883232C73AE46008365C8 /* Mini3_PanicAttackUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BA883142C73AE46008365C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BA883012C73AE45008365C8 /* Mini3-PanicAttack */;
+			targetProxy = 2BA883132C73AE46008365C8 /* PBXContainerItemProxy */;
+		};
+		2BA8831E2C73AE46008365C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BA883012C73AE45008365C8 /* Mini3-PanicAttack */;
+			targetProxy = 2BA8831D2C73AE46008365C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2BA883242C73AE46008365C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BA883252C73AE46008365C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BA883272C73AE46008365C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mini3-PanicAttack/Preview Content\"";
+				DEVELOPMENT_TEAM = N2K3R4X37B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourpet.Mini3-PanicAttack";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BA883282C73AE46008365C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mini3-PanicAttack/Preview Content\"";
+				DEVELOPMENT_TEAM = N2K3R4X37B;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourpet.Mini3-PanicAttack";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2BA8832A2C73AE46008365C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N2K3R4X37B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourpet.Mini3-PanicAttackTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mini3-PanicAttack.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mini3-PanicAttack";
+			};
+			name = Debug;
+		};
+		2BA8832B2C73AE46008365C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N2K3R4X37B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourpet.Mini3-PanicAttackTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mini3-PanicAttack.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mini3-PanicAttack";
+			};
+			name = Release;
+		};
+		2BA8832D2C73AE46008365C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N2K3R4X37B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourpet.Mini3-PanicAttackUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mini3-PanicAttack";
+			};
+			name = Debug;
+		};
+		2BA8832E2C73AE46008365C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N2K3R4X37B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourpet.Mini3-PanicAttackUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mini3-PanicAttack";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BA882FD2C73AE45008365C8 /* Build configuration list for PBXProject "Mini3-PanicAttack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA883242C73AE46008365C8 /* Debug */,
+				2BA883252C73AE46008365C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BA883262C73AE46008365C8 /* Build configuration list for PBXNativeTarget "Mini3-PanicAttack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA883272C73AE46008365C8 /* Debug */,
+				2BA883282C73AE46008365C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BA883292C73AE46008365C8 /* Build configuration list for PBXNativeTarget "Mini3-PanicAttackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA8832A2C73AE46008365C8 /* Debug */,
+				2BA8832B2C73AE46008365C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BA8832C2C73AE46008365C8 /* Build configuration list for PBXNativeTarget "Mini3-PanicAttackUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BA8832D2C73AE46008365C8 /* Debug */,
+				2BA8832E2C73AE46008365C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BA882FA2C73AE45008365C8 /* Project object */;
+}
