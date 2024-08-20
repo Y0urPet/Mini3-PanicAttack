@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "818EB811-4923-4531-AB89-F4EF540EF9E6"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9EC404E1-8FC6-4FFE-9B3C-24EE76079EDE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mini3-PanicAttack/Extensions/BreathingAnimationComponentExtension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "startAnimationSequence()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9EC404E1-8FC6-4FFE-9B3C-24EE76079EDE - 8ab3caa678c17562"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Mini3_PanicAttack.BreathingAnimationComponent.startAnimationSequence() -&gt; ()"
+                  moduleName = "Mini3-PanicAttack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tan/Documents/Mini3-PanicAttack/Mini3-PanicAttack/Extensions/BreathingAnimationComponentExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18">
+               </Location>
+               <Location
+                  uuid = "9EC404E1-8FC6-4FFE-9B3C-24EE76079EDE - 8de47ef08ac434c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in Mini3_PanicAttack.BreathingAnimationComponent.startAnimationSequence() -&gt; ()"
+                  moduleName = "Mini3-PanicAttack"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tan/Documents/Mini3-PanicAttack/Mini3-PanicAttack/Extensions/BreathingAnimationComponentExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
