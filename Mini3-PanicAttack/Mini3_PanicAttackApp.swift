@@ -11,7 +11,8 @@ import SwiftUI
 struct Mini3_PanicAttackApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            BreathingSessionView()
         }
     }
 }
