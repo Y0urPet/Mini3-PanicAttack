@@ -35,12 +35,16 @@ struct BreathingSessionView: View {
     //Breath animation state
     @State var breathStateActive = false
     
+    //Cycle count
+    //@StateObject var cycleCountManager = CycleCountManager()
+    @ObservedObject var manager: CycleCountManager
+    
     var body: some View {
         VStack {
             Spacer()
             
             if (breathStateActive) {
-                BreathingAnimationComponent()
+                BreathingAnimationComponent(manager: manager)
             } else {
                 BreathingInactiveComponent()
             }

@@ -18,6 +18,9 @@ struct BreathingAnimationComponent: View {
     @State var breathState = "Inhale"
     @State var currentBreathingType: BreathingType = .inhale
     @State var durationAnimation: TimeInterval = 4
+    @State var breathStateCycleCount: Int = 1
+    
+    @ObservedObject var manager: CycleCountManager
     
     var body: some View {
         ZStack {
@@ -54,6 +57,12 @@ struct BreathingAnimationComponent: View {
                 currentBreathingType = .hold
                 durationAnimation = 7 // Duration for hold phase
                 breathState = "Hold"
+                if(breathStateCycleCount == 12) {
+                    manager.isCycleFinished = true
+                }
+                else {
+                    breathStateCycleCount+=1
+                }
                 changeBreathState()
             }
         case .hold:
@@ -61,6 +70,12 @@ struct BreathingAnimationComponent: View {
                 currentBreathingType = .exhale
                 durationAnimation = 8 // Duration for exhale phase
                 breathState = "Exhale"
+                if(breathStateCycleCount == 12) {
+                    manager.isCycleFinished = true
+                }
+                else {
+                    breathStateCycleCount+=1
+                }
                 changeBreathState()
             }
         case .exhale:
@@ -68,6 +83,12 @@ struct BreathingAnimationComponent: View {
                 currentBreathingType = .inhale
                 durationAnimation = 4 // Duration for inhale phase
                 breathState = "Inhale"
+                if(breathStateCycleCount == 12) {
+                    manager.isCycleFinished = true
+                }
+                else {
+                    breathStateCycleCount+=1
+                }
                 changeBreathState()
             }
         }
