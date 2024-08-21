@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import Buzz
 
 //Inhale: 4sec, Hold: 7sec, Exhale: 8sec
 //Repeat: 4 times
@@ -14,7 +15,6 @@ enum BreathingType {
     case inhale
     case exhale
     case hold
-    
 }
 
 struct BreathingSessionView: View {
@@ -26,9 +26,10 @@ struct BreathingSessionView: View {
     @State var currentBreathingType: BreathingType = .inhale
     let breathingTypes: [BreathingType] = [.inhale, .hold, .exhale]
     var currentIndex: Int = 0
-    @State var inhaleAnimation = false
-    @State var holdAnimation = false
-    @State var exhaleAnimation = false
+    @State var progressBarActive = false
+    
+    @State var musicIsTapped = false
+    @State var hapticIsTapped = false
     
     var body: some View {
         VStack {
@@ -43,8 +44,18 @@ struct BreathingSessionView: View {
                 HStack {
                     Button(action: {
                         print("Haptic Tapped")
+                        hapticIsTapped.toggle()
+                        if (isPlaying) {
+                            audioManager.stop()
+                        } else {
+                            audioManager.play()
+                        }
                     }, label: {
-                        HapticButtonComponent()
+                        if(hapticIsTapped) {
+                            HapticButtonComponent(opacityNum: 0.25)
+                        } else {
+                            HapticButtonComponent(opacityNum: 1)
+                        }
                     })
                     
                     if(!isPlaying) {
@@ -52,6 +63,8 @@ struct BreathingSessionView: View {
                             print("Play Tapped")
                             audioManager.play()
                             isPlaying.toggle()
+                            progressBarActive.toggle()
+                            Drone().play()
                         }, label: {
                             PlayButtonComponent()
                         })
@@ -61,6 +74,7 @@ struct BreathingSessionView: View {
                             print("Stop Tapped")
                             audioManager.stop()
                             isPlaying.toggle()
+                            progressBarActive.toggle()
                         }, label: {
                             PauseButtonComponent()
                         })
@@ -69,26 +83,29 @@ struct BreathingSessionView: View {
                     
                     Button(action: {
                         print("Music Tapped")
+                        musicIsTapped.toggle()
                     }, label: {
-                        MusicButtonComponent()
+                        if(musicIsTapped){
+                            MusicButtonComponent(opacityNum: 0.25)
+                        } else {
+                            MusicButtonComponent(opacityNum: 1)
+                        }
+                        
                     })
                 }
                 .padding(.top, -100)
-                
-                
             }
-//            
-//            if currentBreathingType == .hold {
-//                ProgressBarComponent(breathingType: currentBreathingType)
-//                    .padding()
-//            } else if currentBreathingType == .exhale {
-//                ProgressBarComponent(breathingType: currentBreathingType)
-//                    .padding()
-//            } else {
-//                ProgressBarComponent(breathingType: currentBreathingType)
-//                    .padding()
-//            }
-            ProgressBarComponent()
+            
+            if(progressBarActive) {
+                ProgressBarComponent()
+                    .padding()
+            } else {
+                Rectangle()
+                    .frame(width: 311, height: 27)
+                    .foregroundStyle(.gray.opacity(0.5))
+                    .clipShape(.rect(cornerRadius: 27))
+                    .padding()
+            }
             
             //dummy spacer
             Spacer()
@@ -96,12 +113,9 @@ struct BreathingSessionView: View {
         .frame(maxWidth: .infinity)
         .ignoresSafeArea()
         .background(.white)
-//        .onAppear {
-//            
-//        }
     }
 }
-//
+
 #Preview {
     BreathingSessionView()
 }

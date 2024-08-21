@@ -23,21 +23,14 @@ struct ProgressBarComponent: View {
             HStack() {
                 Rectangle()
                     .frame(width: progressValue, height: 27)
-                    .foregroundStyle(.blue)
-                    .clipShape(.rect(cornerRadius: 50))
+                    .foregroundStyle(Color.init(hex: 0x3350B8))
+                    .clipShape(.rect(cornerRadius: 40))
                     .onAppear {
-                        withAnimation(Animation.linear(duration: durationAnimation)) {
-                            progressValue = max
-                        }
-                    }
-                    .onChange(of: progressValue) { value in
-                        if value == max {
-                            restartAnimation()
-                        }
+                        restartAnimation()
                     }
                 Spacer()
             }
-            .padding(.leading, 40)
+            .padding(.leading, 45)
         }
     }
 
@@ -51,6 +44,7 @@ struct ProgressBarComponent: View {
                 currentBreathingType = .hold
                 durationAnimation = 7 // Duration for hold phase
                 progressValue = 0 // Reset progress value
+                restartAnimation()
             }
         case .hold:
             withAnimation(Animation.linear(duration: durationAnimation)) {
@@ -60,6 +54,7 @@ struct ProgressBarComponent: View {
                 currentBreathingType = .exhale
                 durationAnimation = 8 // Duration for exhale phase
                 progressValue = 0 // Reset progress value
+                restartAnimation()
             }
         case .exhale:
             withAnimation(Animation.linear(duration: durationAnimation)) {
@@ -69,6 +64,7 @@ struct ProgressBarComponent: View {
                 currentBreathingType = .inhale
                 durationAnimation = 4 // Duration for inhale phase
                 progressValue = 0 // Reset progress value
+                restartAnimation()
             }
         }
     }
