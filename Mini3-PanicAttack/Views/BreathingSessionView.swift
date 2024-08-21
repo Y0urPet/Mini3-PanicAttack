@@ -28,15 +28,22 @@ struct BreathingSessionView: View {
     var currentIndex: Int = 0
     @State var progressBarActive = false
     
+    //Haptic & Music button
     @State var musicIsTapped = false
     @State var hapticIsTapped = false
     
+    //Breath animation state
+    @State var breathStateActive = false
+    
     var body: some View {
         VStack {
-            //dummy spacer
             Spacer()
             
-            BreathingAnimationComponent()
+            if (breathStateActive) {
+                BreathingAnimationComponent()
+            } else {
+                BreathingInactiveComponent()
+            }
             
             Spacer()
             
@@ -64,6 +71,7 @@ struct BreathingSessionView: View {
                             audioManager.play()
                             isPlaying.toggle()
                             progressBarActive.toggle()
+                            breathStateActive.toggle()
                             Drone().play()
                         }, label: {
                             PlayButtonComponent()
@@ -75,6 +83,7 @@ struct BreathingSessionView: View {
                             audioManager.stop()
                             isPlaying.toggle()
                             progressBarActive.toggle()
+                            breathStateActive.toggle()
                         }, label: {
                             PauseButtonComponent()
                         })
@@ -107,15 +116,10 @@ struct BreathingSessionView: View {
                     .padding()
             }
             
-            //dummy spacer
             Spacer()
         }
         .frame(maxWidth: .infinity)
         .ignoresSafeArea()
         .background(.white)
     }
-}
-
-#Preview {
-    BreathingSessionView()
 }

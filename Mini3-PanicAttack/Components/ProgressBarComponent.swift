@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+class SharedVariable {
+    static let shared = SharedVariable()
+    @State var breathState: String = "Inhale"
+}
+
 struct ProgressBarComponent: View {
     @State var progressValue: CGFloat = 0
     @State var currentBreathingType: BreathingType = .inhale
@@ -44,6 +49,7 @@ struct ProgressBarComponent: View {
                 currentBreathingType = .hold
                 durationAnimation = 7 // Duration for hold phase
                 progressValue = 0 // Reset progress value
+                SharedVariable.shared.breathState = "Hold"
                 restartAnimation()
             }
         case .hold:
@@ -54,6 +60,7 @@ struct ProgressBarComponent: View {
                 currentBreathingType = .exhale
                 durationAnimation = 8 // Duration for exhale phase
                 progressValue = 0 // Reset progress value
+                SharedVariable.shared.breathState = "Exhale"
                 restartAnimation()
             }
         case .exhale:
@@ -64,6 +71,7 @@ struct ProgressBarComponent: View {
                 currentBreathingType = .inhale
                 durationAnimation = 4 // Duration for inhale phase
                 progressValue = 0 // Reset progress value
+                SharedVariable.shared.breathState = "Inhale"
                 restartAnimation()
             }
         }
