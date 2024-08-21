@@ -6,14 +6,29 @@
 //
 
 import SwiftUI
+import Combine
+
+//Inhale: 4sec, Hold: 7sec, Exhale: 8sec
+//Repeat: 4 times
+enum BreathingType {
+    case inhale
+    case exhale
+    case hold
+    
+}
 
 struct BreathingSessionView: View {
+    //Audio
     @State var isPlaying = false
-    
-    @State var time = 0
-    @State var timer: Timer?
-    
     let audioManager = AudioPlayerManager()
+    
+    //Progress bar
+    @State var currentBreathingType: BreathingType = .inhale
+    let breathingTypes: [BreathingType] = [.inhale, .hold, .exhale]
+    var currentIndex: Int = 0
+    @State var inhaleAnimation = false
+    @State var holdAnimation = false
+    @State var exhaleAnimation = false
     
     var body: some View {
         VStack {
@@ -36,7 +51,6 @@ struct BreathingSessionView: View {
                         Button(action: {
                             print("Play Tapped")
                             audioManager.play()
-                            startTimer()
                             isPlaying.toggle()
                         }, label: {
                             PlayButtonComponent()
@@ -46,7 +60,6 @@ struct BreathingSessionView: View {
                         Button(action: {
                             print("Stop Tapped")
                             audioManager.stop()
-                            stopTimer()
                             isPlaying.toggle()
                         }, label: {
                             PauseButtonComponent()
@@ -62,24 +75,20 @@ struct BreathingSessionView: View {
                 }
                 .padding(.top, -100)
                 
-                //                TimerComponent(elapsedTime: time)
-                //                    .padding()
-                RoundedRectangle(cornerRadius: 25)
-                    .frame(width: 113, height: 48)
-                    .foregroundStyle(Color.init(hex: 0xD6DCF1))
-                    .overlay {
-                        //Dummy time
-                        if(time >= 10) {
-                            Text("00:\(time)")
-                                .font(Font.custom("Rubik-SemiBold", size: 17))
-                                .foregroundStyle(Color.init(hex: 0x3350B8))
-                        } else {
-                            Text("00:0\(time)")
-                                .font(Font.custom("Rubik-SemiBold", size: 17))
-                                .foregroundStyle(Color.init(hex: 0x3350B8))
-                        }
-                    }
+                
             }
+//            
+//            if currentBreathingType == .hold {
+//                ProgressBarComponent(breathingType: currentBreathingType)
+//                    .padding()
+//            } else if currentBreathingType == .exhale {
+//                ProgressBarComponent(breathingType: currentBreathingType)
+//                    .padding()
+//            } else {
+//                ProgressBarComponent(breathingType: currentBreathingType)
+//                    .padding()
+//            }
+            ProgressBarComponent()
             
             //dummy spacer
             Spacer()
@@ -87,9 +96,12 @@ struct BreathingSessionView: View {
         .frame(maxWidth: .infinity)
         .ignoresSafeArea()
         .background(.white)
+//        .onAppear {
+//            
+//        }
     }
 }
-
+//
 #Preview {
     BreathingSessionView()
 }
