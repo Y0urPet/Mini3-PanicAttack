@@ -4,46 +4,51 @@
 //
 //  Created by Althaf Nafi Anwar on 20/08/24.
 //
+// ExerciseTrackerViewModel.swift
 
 import SwiftData
 import Foundation
 
 @Observable
 class ExerciseTrackerViewModel {
+    private let repository: ExerciseTrackerRepository
+    
     var modelContext: ModelContext
     var tracker: ExerciseTracker?
     var todaysExercise: Exercise?
 
     init(modelContext: ModelContext) {
         self.modelContext = modelContext
+        
+        /* Change the repository type below to use SwiftData, don't forget to change config */
+        
+//        self.repository = PersistentExerciseTrackerRepository(modelContext: modelContext)
+        self.repository = InMemoryExerciseTrackerRepository()
+        
         load()
     }
     
     func load() {
-        // Fetch from SwiftData for defaults
         do {
-            let descriptor = FetchDescriptor<ExerciseTracker>()
-            if let tracker = try modelContext.fetch(descriptor).first {
+            if let tracker = try repository.fetchExerciseTracker() {
                 self.tracker = tracker
-                print("Fetch successful: (\(tracker.longestStreak) streak)")
-                print("lastExercise: \(self.tracker?.lastExercise.title ?? "?")")
-                print("todaysExercise: \(self.todaysExercise?.type.title ?? "?")")
+//                print("Fetch successful: (\(tracker.longestStreak) streak)")
+//                print("lastExercise: \(self.tracker?.lastExercise.title ?? "?")")
+//                print("todaysExercise: \(self.todaysExercise?.type.title ?? "?")")
             } else {
-                let singletonTracker = ExerciseTracker(lastExercise: .visualizing, daysExercised: [])
-                self.modelContext.insert(singletonTracker)
+                let singletonTracker = try repository.insertDefaultExerciseTracker()
                 self.tracker = singletonTracker
             }
             
-            
+            // Set today's exercise based on last finished exercise
+            self.todaysExercise = Exercise(type: tracker?.lastExercise.getNext() ?? .breathing, progress: 0)
         } catch {
-            print("Fetch failed")
+            print("Fetch failed: \(error)")
         }
-        
-        // Set today's exercise based on last finished exercise
-        self.todaysExercise = Exercise(type: tracker?.lastExercise.getNext() ?? .breathing, progress: 0)
     }
-    
 
+    
+    // Used for previews (randomizes data)
     func loadDummyData() {
         guard let tracker = self.tracker else { return }
         
@@ -70,17 +75,17 @@ class ExerciseTrackerViewModel {
         tracker.freezeStreakCount = Int.random(in: 1...5)
         
         do {
-            try modelContext.save()
+            try repository.saveExerciseTracker(tracker)
         } catch {
             print("Error saving dummy data: \(error)")
         }
     }
-    
+
     func isTodaysExercise(of type: ExerciseType) -> Bool {
         guard let todaysExercise = self.todaysExercise else { return false }
         return todaysExercise.type == type
     }
-    
+
     func setTodaysExerciseProgress(_ progress: Int) {
         guard var safeTodaysExercise = self.todaysExercise else { return }
         
@@ -90,8 +95,7 @@ class ExerciseTrackerViewModel {
             markCurrentExerciseAsComplete()
         }
     }
-    
-    
+
     // MARK: - Freeze Streaks
 
     // Method to consume a freeze streak
@@ -105,16 +109,21 @@ class ExerciseTrackerViewModel {
             if tracker.freezeStreakCount > 0 {
                 tracker.freezeStreakCount -= 1
                 tracker.freezeStreakDays.append(today)
-                print("Freeze streak consumed for today.")
             } else {
                 print("No freeze streaks available to consume.")
             }
         } else {
             print("Freeze streak already consumed today.")
         }
+        
+        do {
+            try repository.saveExerciseTracker(tracker)
+        } catch {
+            print("Error saving freeze streak consumption: \(error)")
+        }
     }
-    
-    
+
+    // Method to fill freeze streak gaps
     func fillFreezeStreakGaps() {
         guard let tracker = self.tracker else { return }
         
@@ -136,7 +145,7 @@ class ExerciseTrackerViewModel {
                 if tracker.freezeStreakCount > 0 {
                     tracker.freezeStreakDays.append(currentDate)
                     tracker.freezeStreakCount -= 1
-                    print("Filled gap for \(currentDate) as a freeze streak day.")
+//                    print("Filled gap for \(currentDate) as a freeze streak day.")
                 } else {
                     print("No freeze streaks available to fill the gap for \(currentDate).")
                 }
@@ -146,19 +155,18 @@ class ExerciseTrackerViewModel {
             currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
         }
         
-        // Save the changes to the model context
         do {
-            try modelContext.save()
+            try repository.saveExerciseTracker(tracker)
         } catch {
             print("Error saving freeze streak gaps: \(error)")
         }
     }
-    
+
     // Method to check if the user can use a freeze streak
     func canUseFreezeStreak() -> Bool {
         return tracker?.freezeStreakCount ?? 0 > 0
     }
-    
+
     func markCurrentExerciseAsComplete() {
         guard let tracker = self.tracker, let _ = self.todaysExercise else { return }
         
@@ -180,10 +188,9 @@ class ExerciseTrackerViewModel {
         }
         
         do {
-            try modelContext.save()
+            try repository.saveExerciseTracker(tracker)
         } catch {
             print("Error saving exercise completion: \(error)")
         }
     }
-    
 }

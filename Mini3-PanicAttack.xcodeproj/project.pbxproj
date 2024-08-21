@@ -14,11 +14,7 @@
 		2BA883172C73AE46008365C8 /* Mini3_PanicAttackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883162C73AE46008365C8 /* Mini3_PanicAttackTests.swift */; };
 		2BA883212C73AE46008365C8 /* Mini3_PanicAttackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883202C73AE46008365C8 /* Mini3_PanicAttackUITests.swift */; };
 		2BA883232C73AE46008365C8 /* Mini3_PanicAttackUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883222C73AE46008365C8 /* Mini3_PanicAttackUITestsLaunchTests.swift */; };
-		2BA883302C73B054008365C8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA8832F2C73B054008365C8 /* MainView.swift */; };
-		2BA883322C73B076008365C8 /* CheckInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883312C73B076008365C8 /* CheckInView.swift */; };
-		2BA883342C73B086008365C8 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883332C73B086008365C8 /* ExploreView.swift */; };
-		2BA883362C73B091008365C8 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883352C73B091008365C8 /* ActivityView.swift */; };
-		2BA8833A2C73BC0E008365C8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883392C73BC0E008365C8 /* ProfileView.swift */; };
+		2BA883322C73B076008365C8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883312C73B076008365C8 /* MainView.swift */; };
 		2BA8835C2C743470008365C8 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA8834C2C743314008365C8 /* Rubik-Medium.ttf */; };
 		2BA8835D2C743470008365C8 /* Rubik-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA8834A2C743314008365C8 /* Rubik-ExtraBoldItalic.ttf */; };
 		2BA8835E2C743470008365C8 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883472C743314008365C8 /* Rubik-SemiBold.ttf */; };
@@ -35,6 +31,15 @@
 		2BA883692C743470008365C8 /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883402C743313008365C8 /* Rubik-ExtraBold.ttf */; };
 		A4027F762C743AC000750BA3 /* ExerciseTrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4027F752C743AC000750BA3 /* ExerciseTrackerViewModel.swift */; };
 		A4027F782C743AD300750BA3 /* ExerciseTrackerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4027F772C743AD300750BA3 /* ExerciseTrackerModel.swift */; };
+		A430CDA82C7589830085946B /* ExerciseTrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDA72C7589830085946B /* ExerciseTrackerRepository.swift */; };
+		A430CDAB2C7589BF0085946B /* PersistentExerciseTrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDAA2C7589BF0085946B /* PersistentExerciseTrackerRepository.swift */; };
+		A430CDAF2C7591610085946B /* DummyExerciseTrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDAE2C7591610085946B /* DummyExerciseTrackerRepository.swift */; };
+		A430CDB32C7592630085946B /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDB22C7592630085946B /* Exercise.swift */; };
+		A430CDB52C75927C0085946B /* ExerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDB42C75927C0085946B /* ExerciseType.swift */; };
+		A430CDB92C7593990085946B /* ExerciseContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDB82C7593990085946B /* ExerciseContentView.swift */; };
+		A430CDBB2C7593AE0085946B /* ExerciseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDBA2C7593AE0085946B /* ExerciseCardView.swift */; };
+		A430CDBD2C7593E40085946B /* WideCardViewWithProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDBC2C7593E40085946B /* WideCardViewWithProgress.swift */; };
+		A430CDBF2C75942D0085946B /* WeeklyStreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDBE2C75942D0085946B /* WeeklyStreakView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,11 +70,7 @@
 		2BA8831C2C73AE46008365C8 /* Mini3-PanicAttackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mini3-PanicAttackUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA883202C73AE46008365C8 /* Mini3_PanicAttackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini3_PanicAttackUITests.swift; sourceTree = "<group>"; };
 		2BA883222C73AE46008365C8 /* Mini3_PanicAttackUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini3_PanicAttackUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2BA8832F2C73B054008365C8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		2BA883312C73B076008365C8 /* CheckInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInView.swift; sourceTree = "<group>"; };
-		2BA883332C73B086008365C8 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
-		2BA883352C73B091008365C8 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
-		2BA883392C73BC0E008365C8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2BA883312C73B076008365C8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2BA8833D2C743281008365C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BA883402C743313008365C8 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
 		2BA883412C743313008365C8 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
@@ -87,6 +88,15 @@
 		2BA8834D2C743314008365C8 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		A4027F752C743AC000750BA3 /* ExerciseTrackerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTrackerViewModel.swift; sourceTree = "<group>"; };
 		A4027F772C743AD300750BA3 /* ExerciseTrackerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTrackerModel.swift; sourceTree = "<group>"; };
+		A430CDA72C7589830085946B /* ExerciseTrackerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTrackerRepository.swift; sourceTree = "<group>"; };
+		A430CDAA2C7589BF0085946B /* PersistentExerciseTrackerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentExerciseTrackerRepository.swift; sourceTree = "<group>"; };
+		A430CDAE2C7591610085946B /* DummyExerciseTrackerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyExerciseTrackerRepository.swift; sourceTree = "<group>"; };
+		A430CDB22C7592630085946B /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		A430CDB42C75927C0085946B /* ExerciseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseType.swift; sourceTree = "<group>"; };
+		A430CDB82C7593990085946B /* ExerciseContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseContentView.swift; sourceTree = "<group>"; };
+		A430CDBA2C7593AE0085946B /* ExerciseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCardView.swift; sourceTree = "<group>"; };
+		A430CDBC2C7593E40085946B /* WideCardViewWithProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideCardViewWithProgress.swift; sourceTree = "<group>"; };
+		A430CDBE2C75942D0085946B /* WeeklyStreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyStreakView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +150,7 @@
 				2BA883052C73AE45008365C8 /* Mini3_PanicAttackApp.swift */,
 				A4027F742C743AAF00750BA3 /* ViewModel */,
 				A4027F732C74372D00750BA3 /* Model */,
+				A430CDA62C7589750085946B /* Repository */,
 				2BA8833E2C7432BB008365C8 /* Views */,
 				2BA8833F2C7432FF008365C8 /* Font */,
 				2BA883092C73AE46008365C8 /* Assets.xcassets */,
@@ -178,11 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				2BA883072C73AE45008365C8 /* ContentView.swift */,
-				2BA8832F2C73B054008365C8 /* MainView.swift */,
-				2BA883312C73B076008365C8 /* CheckInView.swift */,
-				2BA883332C73B086008365C8 /* ExploreView.swift */,
-				2BA883352C73B091008365C8 /* ActivityView.swift */,
-				2BA883392C73BC0E008365C8 /* ProfileView.swift */,
+				A430CDB62C7593320085946B /* Main */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				A4027F772C743AD300750BA3 /* ExerciseTrackerModel.swift */,
+				A430CDB22C7592630085946B /* Exercise.swift */,
+				A430CDB42C75927C0085946B /* ExerciseType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +231,60 @@
 				A4027F752C743AC000750BA3 /* ExerciseTrackerViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A430CDA62C7589750085946B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A430CDAD2C758D710085946B /* Dummy */,
+				A430CDAC2C758D5C0085946B /* Persistent */,
+				A430CDA92C7589B10085946B /* Protocols */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A430CDA92C7589B10085946B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A430CDA72C7589830085946B /* ExerciseTrackerRepository.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A430CDAC2C758D5C0085946B /* Persistent */ = {
+			isa = PBXGroup;
+			children = (
+				A430CDAA2C7589BF0085946B /* PersistentExerciseTrackerRepository.swift */,
+			);
+			path = Persistent;
+			sourceTree = "<group>";
+		};
+		A430CDAD2C758D710085946B /* Dummy */ = {
+			isa = PBXGroup;
+			children = (
+				A430CDAE2C7591610085946B /* DummyExerciseTrackerRepository.swift */,
+			);
+			path = Dummy;
+			sourceTree = "<group>";
+		};
+		A430CDB62C7593320085946B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A430CDB72C7593700085946B /* Components */,
+				2BA883312C73B076008365C8 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A430CDB72C7593700085946B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A430CDB82C7593990085946B /* ExerciseContentView.swift */,
+				A430CDBA2C7593AE0085946B /* ExerciseCardView.swift */,
+				A430CDBC2C7593E40085946B /* WideCardViewWithProgress.swift */,
+				A430CDBE2C75942D0085946B /* WeeklyStreakView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,14 +432,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4027F782C743AD300750BA3 /* ExerciseTrackerModel.swift in Sources */,
-				2BA883322C73B076008365C8 /* CheckInView.swift in Sources */,
+				A430CDBF2C75942D0085946B /* WeeklyStreakView.swift in Sources */,
+				A430CDB52C75927C0085946B /* ExerciseType.swift in Sources */,
+				A430CDBB2C7593AE0085946B /* ExerciseCardView.swift in Sources */,
+				2BA883322C73B076008365C8 /* MainView.swift in Sources */,
+				A430CDAF2C7591610085946B /* DummyExerciseTrackerRepository.swift in Sources */,
 				A4027F762C743AC000750BA3 /* ExerciseTrackerViewModel.swift in Sources */,
+				A430CDBD2C7593E40085946B /* WideCardViewWithProgress.swift in Sources */,
 				2BA883082C73AE45008365C8 /* ContentView.swift in Sources */,
-				2BA883302C73B054008365C8 /* MainView.swift in Sources */,
+				A430CDAB2C7589BF0085946B /* PersistentExerciseTrackerRepository.swift in Sources */,
 				2BA883062C73AE45008365C8 /* Mini3_PanicAttackApp.swift in Sources */,
-				2BA883342C73B086008365C8 /* ExploreView.swift in Sources */,
-				2BA8833A2C73BC0E008365C8 /* ProfileView.swift in Sources */,
-				2BA883362C73B091008365C8 /* ActivityView.swift in Sources */,
+				A430CDA82C7589830085946B /* ExerciseTrackerRepository.swift in Sources */,
+				A430CDB32C7592630085946B /* Exercise.swift in Sources */,
+				A430CDB92C7593990085946B /* ExerciseContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,8 +616,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -580,8 +648,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

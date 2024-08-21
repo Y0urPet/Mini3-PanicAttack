@@ -12,10 +12,6 @@ struct ContentView: View {
     @Environment(ExerciseTrackerViewModel.self) private var viewModel: ExerciseTrackerViewModel
     
     var body: some View {
-        CheckInView()
+        MainView()
     }
 }
-//
-//#Preview {
-//    ContentView()
-//}
