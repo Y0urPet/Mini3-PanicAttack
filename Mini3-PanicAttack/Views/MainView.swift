@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MainView: View {
+    
+    @Environment(ExerciseTrackerViewModel.self) private var viewModel: ExerciseTrackerViewModel
+
     var body: some View {
         TabView {
             CheckInView()
@@ -28,7 +32,7 @@ struct MainView: View {
         }
     }
 }
-
-#Preview {
-    MainView()
-}
+//
+//#Preview {
+//    MainView()
+//}

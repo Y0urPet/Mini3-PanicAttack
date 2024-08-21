@@ -5,230 +5,351 @@
 //  Created by Timothy Andrian on 19/08/24.
 //
 
+import Foundation
 import SwiftUI
+import SwiftData
 
 struct CheckInView: View {
-    @State private var sliderValue: Double = 0.0
-    @State var selection = ItemCalendar(id: "1", name: "SUN",dateNumber: 1)
+    @Environment(ExerciseTrackerViewModel.self) private var viewModel: ExerciseTrackerViewModel
+    
+    var allExercisesList: [Exercise] = [
+        Exercise(type: .breathing),
+        Exercise(type: .grounding),
+        Exercise(type: .HALT),
+        Exercise(type: .PMR),
+        Exercise(type: .thinking),
+        Exercise(type: .visualizing),
+    ]
+    
+    // TODO: Fix colors
     var body: some View {
-        ScrollView {
-            VStack(spacing:28){
-                VStack() {
-                    Text("Hi there..")
-                        .font(Font.custom("Rubik-SemiBold", size: 24))
-                    Text("How was your day?")
-                        .font(Font.custom("Rubik-Regular", size: 16))
-                }
-                VStack(spacing:16){
-                    CustomSlider(
-                        value: $sliderValue,
-                        range: 0...100,
-                        trackHeight: 28
-                    )
-                    .frame(width: 330)
-                    HStack{
-                        Text("Overwhelmed")
-                            .font(.system(size: 14))
-                        Spacer()
-                        Text("Peaceful")
-                            .font(.system(size: 14))
+        NavigationStack {
+            ScrollView {
+                VStack(spacing: 36) {
+                    VStack(spacing: 12) {
+                        Text("Your Streaks")
+                            .font(.system(size: 24))
+                            .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        HStack {
+                            
+                            // MARK: - Streak count
+                            Text("Count:")
+                                .foregroundStyle(.gray)
+                            Image(.fire)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 20)
+                            Text("\(viewModel.tracker?.currentStreak ?? -1) / \(viewModel.tracker?.longestStreak ?? -1)")
+                            
+                            // MARK: - Divider
+                            Text("|")
+                                .scaleEffect(y: 1.75)
+                            
+                            // MARK: - Freeze Streak
+                            Text("Freeze Streak:")
+                                .foregroundStyle(.gray)
+                            Image(.blueFire)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 20)
+                            Text("\(viewModel.tracker?.freezeStreakCount ?? -1) ")
+                        }
+                        .font(.system(size: 14))
+                        .fontWeight(.regular)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        
+                        // MARK: - Streak calendar comp.
+                        WeeklyStreakView(viewModel: viewModel)
+                            .padding(.top, 8)
+                    }
+                    
+                    // MARK: - Today' Practice
+                    VStack(spacing: 4) {
+                        HStack {
+                            Text("Today’s Practice")
+                                .font(.system(size: 24))
+                                .fontWeight(.bold)
+                            Spacer()
+                        }
+                        HStack {
+                            Text("Complete this practice to build your streak")
+                                .foregroundStyle(.gray)
+                                .font(.system(size: 14))
+                            Spacer()
+                        }
+                        
+                        // TODO: Change default from 99 to 0 percent
+                        HighlightedExerciseCardView(exercise: viewModel.todaysExercise ?? Exercise(type: .breathing))
+                            .padding(.top, 16)
+                    }
+                    
+                    
+                    
+                    // MARK: - All Practices
+                    VStack(spacing: 4) {
+                        HStack {
+                            Text("All Practices")
+                                .font(.system(size: 24))
+                                .fontWeight(.bold)
+                            Spacer()
+                        }
+                        HStack {
+                            Text("Do these steps to prepare for emergencies")
+                                .foregroundStyle(.gray)
+                                .font(.system(size: 14))
+                            Spacer()
+                        }
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 0) {
+                                ForEach(allExercisesList, id: \.self) { e in
+                                    Spacer(minLength: 18)
+                                    ExerciseCardView(exercise: e)
+                                }
+                            }
+                        }
+                        .padding(.horizontal, -18)
+                        .padding(.top, 16)
                     }
                 }
-                .padding()
-                .background(.white)
-                .clipShape(.rect(cornerRadius: 16))
-                PickerCalendarView(selection: $selection)
+                .padding(18)
+                .padding(.top, 20)
+            }
+            .background(.neutral100)
+            .navigationTitle("Practice")
+            .navigationBarTitleDisplayMode(.large)
+            .toolbarBackground(
+                Color.white,
+                for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+        }
+    }
+}
+
+struct WeeklyStreakView: View {
+    @State var viewModel: ExerciseTrackerViewModel
+    
+    var body: some View {
+           HStack(spacing: 16) {
+               ForEach(daysOfWeek(), id: \.self) { day in
+                   VStack {
+                       Text(day.abbreviated)
+                           .font(.system(size: 13))
+                           .fontWeight(.bold)
+                           .foregroundStyle(Calendar.current.isDateInToday(day.date) ? .blue : .gray)
+                           .padding(.bottom, 4)
+                       
+                       // Determine the image resource based on exercise and freeze streak
+                       if viewModel.tracker?.daysExercised.contains(where: { $0.isSameDay(as: day.date) }) ?? false {
+                           Image(.fire)
+                               .resizable()
+                               .aspectRatio(contentMode: .fit)
+                               .frame(width: 32)
+                       } else if viewModel.tracker?.freezeStreakDays.contains(where: { $0.isSameDay(as: day.date) }) ?? false {
+                           Image(.blueFire)
+                               .resizable()
+                               .aspectRatio(contentMode: .fit)
+                               .frame(width: 32)
+                       } else {
+                           Image(.fireSkeleton)
+                               .resizable()
+                               .aspectRatio(contentMode: .fit)
+                               .frame(width: 32)
+                       }
+                   }
+               }
+           }
+           .padding(.top, 20)
+           .padding(.bottom, 20)
+           .padding(.horizontal)
+           .frame(maxWidth: .infinity)
+           .background(Color(.white).clipShape(RoundedRectangle(cornerRadius: 12)))
+       }
+       
+       // Function to get the days of the current week
+       private func daysOfWeek() -> [DayInfo] {
+           let calendar = Calendar.current
+           let today = Date()
+           
+           // Find the last Sunday
+           let startOfWeek = calendar.date(byAdding: .day, value: -calendar.component(.weekday, from: today) + 1, to: today)!
+           
+           // Create an array of DayInfo for the week
+           return (0..<7).map { index in
+               let dayDate = calendar.date(byAdding: .day, value: index, to: startOfWeek)!
+               return DayInfo(date: dayDate)
+           }
+       }
+}
+
+extension Date {
+    func isSameDay(as otherDate: Date) -> Bool {
+        let calendar = Calendar.current
+        return calendar.isDate(self, inSameDayAs: otherDate)
+    }
+}
+
+// Helper struct to hold day information
+struct DayInfo: Hashable {
+    let date: Date
+    
+    var abbreviated: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEE" // Abbreviated day name
+        return formatter.string(from: date).uppercased()
+    }
+}
+
+
+struct HighlightedExerciseCardView: View {
+    var exercise: Exercise
+    var title: String
+    var subTitle: String
+    var imageThumb: ImageResource
+    var progress: Int
+    
+    init(exercise: Exercise) {
+        self.exercise = exercise
+        self.title = exercise.type.title
+        self.subTitle = exercise.type.description
+        self.imageThumb = exercise.type.imageThumb
+        self.progress = exercise.progress
+    }
+    
+    var body: some View {
+        NavigationLink(destination: ExerciseContentView(exercise: exercise)) {
+            VStack {
+                HStack(spacing: 2) {
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text(title)
+                            .font(.system(size: 20))
+                            .fontWeight(.bold)
+                            .foregroundStyle(.black)
+                        Text(subTitle)
+                            .font(.system(size: 14))
+                            .fontWeight(.regular)
+                            .foregroundStyle(.gray)
+                    }
+                    Spacer()
+                    
+                    Image(imageThumb)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill) // Fill the frame
+                        .clipShape(.rect(cornerRadius: 8))
+                        .frame(width: UIScreen.main.bounds.width/3)
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 12)
+                
+                // Progress Bar
+                HStack(alignment: .lastTextBaseline, spacing: 12) {
+                    ProgressView(value: Float(progress), total: 100)
+                    .scaleEffect(y: 1.5) // Sets ProgressView height
+                    
+                    Text("\(progress)%")
+                        .font(.system(size: 10))
+                }
+                .padding(.horizontal)
+                .padding(.bottom, 16)
+            }
+            .background(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+        .frame(maxWidth: .infinity)
+        }
+    }
+}
+
+struct ExerciseCardView: View {
+    var exercise: Exercise
+    let title: String
+    let subTitle: String
+    let imageThumb: ImageResource
+    
+    init(exercise: Exercise) {
+        self.exercise = exercise
+        self.title = exercise.type.title
+        self.subTitle = exercise.type.description
+        self.imageThumb = exercise.type.imageThumb
+    }
+    
+    var body: some View {
+        NavigationLink(destination: ExerciseContentView(exercise: exercise)) {
+            VStack(spacing: 4) {
+                // Fixed frame for the image
+                Image(imageThumb)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill) // Fill the frame while maintaining aspect ratio
+                    .frame(width: 200, height: 125) // Fixed width and height for all cards
+                    .clipped() // Clips the image to fit within the specified frame
+                
                 HStack {
-                    Text("Today’s Exercise")
-                        .font(.system(size: 24))
-                        .fontWeight(.semibold)
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(title)
+                            .font(.system(size: 20))
+                            .fontWeight(.bold)
+                            .foregroundStyle(.black)
+                        Text(subTitle)
+                            .font(.system(size: 14))
+                            .foregroundStyle(.gray)
+                    }
+                    .multilineTextAlignment(.leading)
                     Spacer()
                 }
-                VStack{
-                    Rectangle()
-                        .frame(height: 176)
-                        .foregroundStyle(.blue)
-                    HStack {
-                        VStack(alignment: .leading){
-                            Text("Deep Breathing")
-                                .font(.system(size: 20))
-                                .fontWeight(.semibold)
-                            Text("Find calm with each breath")
-                                .font(.system(size: 14))
-                        }
-                        Spacer()
-                    }
-                    .padding()
-                    Button {
-                        
-                    } label: {
-                        Text("Start")
-                            .foregroundStyle(.black)
-                            .frame(width: 330)
-                            .padding(.vertical, 8)
-                            .background(.blue)
-                            .clipShape(.rect(cornerRadius: 53))
-                    }
-                    .padding(.bottom, 16)
-                }
-                .background(.white)
-                .clipShape(.rect(cornerRadius: 12))
-                
+                .padding()
             }
-            .padding()
+            .frame(width: 200, height: 275) // Fixed width for the entire card
+            .background(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
         }
-        .background(.neutral100)
     }
 }
 
-struct PickerCalendarView: View {
-    @Binding var selection:ItemCalendar
-    let listOfWeekDay = [
-        ItemCalendar(id: "1", name: "SUN", dateNumber: 1),
-        ItemCalendar(id: "2", name: "MON", dateNumber: 2),
-        ItemCalendar(id: "3", name: "TUE", dateNumber: 3),
-        ItemCalendar(id: "4", name: "WED", dateNumber: 4),
-        ItemCalendar(id: "5", name: "THU", dateNumber: 5),
-        ItemCalendar(id: "6", name: "FRI", dateNumber: 6),
-        ItemCalendar(id: "7", name: "SAT", dateNumber: 7),
-        ItemCalendar(id: "8", name: "SUN", dateNumber: 8),
-        ItemCalendar(id: "9", name: "MON", dateNumber: 9),
-        ItemCalendar(id: "10", name: "TUE", dateNumber: 10),
-        ItemCalendar(id: "11", name: "WED", dateNumber: 11),
-        ItemCalendar(id: "12", name: "THU", dateNumber: 12),
-        ItemCalendar(id: "13", name: "FRI", dateNumber: 13),
-        ItemCalendar(id: "14", name: "SAT", dateNumber: 14),
-        ItemCalendar(id: "15", name: "SUN", dateNumber: 15),
-        ItemCalendar(id: "16", name: "MON", dateNumber: 16),
-        ItemCalendar(id: "17", name: "TUE", dateNumber: 17),
-        ItemCalendar(id: "18", name: "WED", dateNumber: 18),
-        ItemCalendar(id: "19", name: "THU", dateNumber: 19),
-        ItemCalendar(id: "20", name: "FRI", dateNumber: 20),
-        ItemCalendar(id: "21", name: "SAT", dateNumber: 21),
-        ItemCalendar(id: "22", name: "SUN", dateNumber: 22),
-        ItemCalendar(id: "23", name: "MON", dateNumber: 23),
-        ItemCalendar(id: "24", name: "TUE", dateNumber: 24),
-        ItemCalendar(id: "25", name: "Wed", dateNumber: 25),
-        ItemCalendar(id: "26", name: "THU", dateNumber: 26),
-        ItemCalendar(id: "27", name: "FRI", dateNumber: 27),
-        ItemCalendar(id: "28", name: "SAT", dateNumber: 28),
-        ItemCalendar(id: "29", name: "SUN", dateNumber: 29),
-        ItemCalendar(id: "30", name: "MON", dateNumber: 20),
-        ItemCalendar(id: "31", name: "TUE", dateNumber: 31),
-        
-    ]
+struct ExerciseContentView: View {
+    @Environment(ExerciseTrackerViewModel.self) private var viewModel
+    @Environment(\.dismiss) private var dismiss
+    
+    let exercise: Exercise
+    
     var body: some View {
-        PickerCalendar(items: listOfWeekDay, selection: $selection) { item in
-            VStack(spacing:20) {
-                Text("\(item.name)")
-                    .font(.system(size: 13))
-                Text("\(item.dateNumber)")
-                    .font(.system(size: 20))
-                    .foregroundStyle(.yellow)
-                    .brightness(-0.3)
-                Circle()
-                    .frame(width: 20)
-                    .foregroundStyle(.yellow)
+        VStack {
+            Text(exercise.type.title) // Display the title of the exercise
+                .font(.title)
+                .padding()
+
+            // Check if this exercise is today's exercise
+            if viewModel.isTodaysExercise(of: exercise.type) {
+                Text("This is today's exercise!")
+                    .font(.subheadline)
+                    .foregroundColor(.green)
+                    .padding(.top, 5)
+                Button("Mark as completed", action: {
+                    viewModel.markCurrentExerciseAsComplete()
+                    dismiss()
+                })
             }
-            .frame(width: 40)
         }
-        .clipShape(.rect(cornerRadius: 16))
-    }
-}
-
-struct PickerCalendar<T: Identifiable & Equatable, C: RandomAccessCollection<T>, Content: View>: View  {
-    let items: C
-    @Binding var selection: T
-    @ViewBuilder let itemBuilder: (T) -> Content
-    var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 0) {
-                ForEach(items) { source in
-                    ZStack {
-                        if selection == source {
-                            Circle()
-                                .frame(width: 44)
-                                .offset(y:-2)
-                                .foregroundStyle(.yellow.opacity(0.5))
-                        }
-                        Button {
-                            selection = source
-                        } label: {
-                            itemBuilder(source)
-                                .padding()
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                        .animation(.default, value: selection)
-                    }
-                }
-            }
-            .padding(4)
-            .background(Color.white)
-            .cornerRadius(16)
-        }
-        
-    }
-}
-
-struct ItemCalendar: Identifiable, Equatable {
-    let id: String
-    let name: String
-    let dateNumber: Int
-}
-
-struct CustomSlider: View {
-    @Binding var value: Double
-    let range: ClosedRange<Double>
-    let trackHeight: CGFloat
-
-    private let thumbDiameter: CGFloat = 54
-
-    var body: some View {
-        GeometryReader { geometry in
-            let thumbRadius = thumbDiameter / 2
-            let sliderWidth = geometry.size.width - thumbDiameter
-
-            // Calculate the normalized value within the range
-            let normalizedValue = CGFloat((value - range.lowerBound) / (range.upperBound - range.lowerBound))
-            
-            // Adjust xOffset to ensure thumb stays within bounds
-            let xOffset = sliderWidth * normalizedValue
-            
-            ZStack(alignment: .leading) {
-                // Track
-                Rectangle()
-                    .fill(Color.gray.opacity(0.5))
-                    .frame(height: trackHeight)
-                    .cornerRadius(trackHeight / 2)
-
-                // Thumb
-                Circle()
-                    .fill(Color.blue)
-                    .frame(width: thumbDiameter, height: thumbDiameter)
-                    .offset(x: xOffset)
-                    .gesture(
-                        DragGesture()
-                            .onChanged { gesture in
-                                // Calculate the new X position
-                                let newX = gesture.location.x - thumbRadius
-                                
-                                // Clamp the newX to ensure the thumb stays within bounds
-                                let clampedX = max(0, min(newX, sliderWidth))
-                                
-                                // Convert the clampedX to a new slider value
-                                let newValue = Double(clampedX / sliderWidth) * (range.upperBound - range.lowerBound) + range.lowerBound
-                                
-                                // Update the binding value
-                                self.value = newValue
-                            }
-                    )
-            }
-//            .padding(.horizontal, thumbRadius)
-        }
-        .frame(height: thumbDiameter) // Make sure the frame height fits the thumb
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(.systemBackground))
     }
 }
 
 #Preview {
-    CheckInView()
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: ExerciseTracker.self, configurations: config)
+    let context = container.mainContext
+    
+    let vm = ExerciseTrackerViewModel(modelContext: context)
+    
+    vm.loadDummyData()
+    print(vm.tracker?.freezeStreakCount ?? -1)
+    vm.fillFreezeStreakGaps()
+    
+//    tracker.load()
+
+    return CheckInView()
+        .modelContainer(container).modelContainer(container)
+        .environment(vm)
+    
 }

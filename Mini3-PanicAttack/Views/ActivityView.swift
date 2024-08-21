@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ActivityView: View {
     var body: some View {
-        Text("THis is ActivityView")
+        Text("This is ActivityView")
     }
 }
 

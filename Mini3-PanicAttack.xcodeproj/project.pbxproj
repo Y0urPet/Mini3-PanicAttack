@@ -33,6 +33,8 @@
 		2BA883672C743470008365C8 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA8834B2C743314008365C8 /* Rubik-LightItalic.ttf */; };
 		2BA883682C743470008365C8 /* Rubik-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883442C743313008365C8 /* Rubik-SemiBoldItalic.ttf */; };
 		2BA883692C743470008365C8 /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883402C743313008365C8 /* Rubik-ExtraBold.ttf */; };
+		A4027F762C743AC000750BA3 /* ExerciseTrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4027F752C743AC000750BA3 /* ExerciseTrackerViewModel.swift */; };
+		A4027F782C743AD300750BA3 /* ExerciseTrackerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4027F772C743AD300750BA3 /* ExerciseTrackerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +70,7 @@
 		2BA883332C73B086008365C8 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		2BA883352C73B091008365C8 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		2BA883392C73BC0E008365C8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		2BA8833D2C743281008365C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2BA8833D2C743281008365C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BA883402C743313008365C8 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
 		2BA883412C743313008365C8 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		2BA883422C743313008365C8 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -83,6 +85,8 @@
 		2BA8834B2C743314008365C8 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
 		2BA8834C2C743314008365C8 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		2BA8834D2C743314008365C8 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		A4027F752C743AC000750BA3 /* ExerciseTrackerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTrackerViewModel.swift; sourceTree = "<group>"; };
+		A4027F772C743AD300750BA3 /* ExerciseTrackerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTrackerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,11 +137,13 @@
 		2BA883042C73AE45008365C8 /* Mini3-PanicAttack */ = {
 			isa = PBXGroup;
 			children = (
-				2BA8833D2C743281008365C8 /* Info.plist */,
 				2BA883052C73AE45008365C8 /* Mini3_PanicAttackApp.swift */,
-				2BA8833F2C7432FF008365C8 /* Font */,
+				A4027F742C743AAF00750BA3 /* ViewModel */,
+				A4027F732C74372D00750BA3 /* Model */,
 				2BA8833E2C7432BB008365C8 /* Views */,
+				2BA8833F2C7432FF008365C8 /* Font */,
 				2BA883092C73AE46008365C8 /* Assets.xcassets */,
+				2BA8833D2C743281008365C8 /* Info.plist */,
 				2BA8830B2C73AE46008365C8 /* Preview Content */,
 			);
 			path = "Mini3-PanicAttack";
@@ -200,6 +206,22 @@
 				2BA883442C743313008365C8 /* Rubik-SemiBoldItalic.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		A4027F732C74372D00750BA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4027F772C743AD300750BA3 /* ExerciseTrackerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4027F742C743AAF00750BA3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4027F752C743AC000750BA3 /* ExerciseTrackerViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,7 +368,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4027F782C743AD300750BA3 /* ExerciseTrackerModel.swift in Sources */,
 				2BA883322C73B076008365C8 /* CheckInView.swift in Sources */,
+				A4027F762C743AC000750BA3 /* ExerciseTrackerViewModel.swift in Sources */,
 				2BA883082C73AE45008365C8 /* ContentView.swift in Sources */,
 				2BA883302C73B054008365C8 /* MainView.swift in Sources */,
 				2BA883062C73AE45008365C8 /* Mini3_PanicAttackApp.swift in Sources */,
@@ -513,10 +537,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini3-PanicAttack/Preview Content\"";
-				DEVELOPMENT_TEAM = N2K3R4X37B;
+				DEVELOPMENT_TEAM = YTWBVW7W5F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini3-PanicAttack/Info.plist";
@@ -532,6 +557,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yourpet.Mini3-PanicAttack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -543,10 +569,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini3-PanicAttack/Preview Content\"";
-				DEVELOPMENT_TEAM = N2K3R4X37B;
+				DEVELOPMENT_TEAM = YTWBVW7W5F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini3-PanicAttack/Info.plist";
@@ -562,6 +589,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yourpet.Mini3-PanicAttack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
