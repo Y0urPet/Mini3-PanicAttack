@@ -22,7 +22,7 @@ struct ExerciseCardView: View {
     }
     
     var body: some View {
-        NavigationLink(destination: ExerciseContentView(exercise: exercise)) {
+        NavigationLink(destination: BreathingExerciseView()/*ExerciseContentView(exercise: exercise)*/) {
             VStack(spacing: 4) {
                 // Fixed frame for the image
                 Image(imageThumb)

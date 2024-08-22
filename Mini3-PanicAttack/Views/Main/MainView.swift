@@ -140,7 +140,7 @@ struct MainView: View {
 //    vm.loadDummyData()
     
     // Sets to 100%
-    vm.setTodaysProgress(to: 100)
+    vm.setTodaysProgress(to: 70)
     
 //     Auto freeze streak
     vm.autoFreezeStreaks()
