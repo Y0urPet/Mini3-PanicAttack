@@ -69,20 +69,20 @@ enum ExerciseType: Codable {
         }
     }
     
-    var exerciseView: some View {
+    @ViewBuilder var exerciseView: some View {
         switch self {
         case .breathing:
-            return BreathingExerciseView()
+            BreathingExerciseView()
         case .grounding:
-            return GroundingExerciseView()
+            GroundingExerciseView()
         case .HALT:
-            return BreathingExerciseView()
+            BreathingExerciseView()
         case .PMR:
-            return BreathingExerciseView()
+            BreathingExerciseView()
         case .thinking:
-            return BreathingExerciseView()
+            BreathingExerciseView()
         case .visualizing:
-            return BreathingExerciseView()
+            BreathingExerciseView()
         }
     }
     

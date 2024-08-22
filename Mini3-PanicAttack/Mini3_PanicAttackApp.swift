@@ -27,7 +27,7 @@ struct Mini3_PanicAttackApp: App {
     init() {
         do {
             // TODO: Change to store persistently
-            let config = ModelConfiguration(isStoredInMemoryOnly: true)
+            let config = ModelConfiguration(isStoredInMemoryOnly: false)
             container = try ModelContainer(for: ExerciseTracker.self, configurations: config)
             viewModel = ExerciseTrackerViewModel(modelContext: container.mainContext)
         } catch {
