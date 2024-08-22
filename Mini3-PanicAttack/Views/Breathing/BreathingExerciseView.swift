@@ -11,11 +11,13 @@ struct BreathingExerciseView: View {
     @StateObject var cycleCountManager = CycleCountManager()
     
     var body: some View {
-        if(cycleCountManager.isCycleFinished) {
-            CongratulationView()
-        } else {
-            BreathingSessionView(manager: cycleCountManager)
-        }
+        ZStack {
+            if(cycleCountManager.isCycleFinished) {
+                CongratulationView()
+            } else {
+                BreathingSessionView(manager: cycleCountManager)
+            }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 

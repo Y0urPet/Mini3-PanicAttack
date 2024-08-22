@@ -24,6 +24,7 @@ struct CongratulationView: View {
                     .font(Font.custom("Rubik-Regular", size: 16))
                     .foregroundStyle(Color(red: 0.40784313725490196, green: 0.4549019607843137, blue: 0.5372549019607843))
                     .padding(2)
+                    .multilineTextAlignment(.center)
                 Button {
                     
                 } label: {
@@ -42,6 +43,7 @@ struct CongratulationView: View {
             .background(.white)
             .padding(16)
         }
+        .padding()
         .background(.white)
     }
 }

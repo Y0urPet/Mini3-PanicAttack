@@ -23,7 +23,7 @@ struct WideCardViewWithProgress: View {
     }
     
     var body: some View {
-        NavigationLink(destination: ExerciseContentView(exercise: exercise)) {
+        NavigationLink(destination: exercise.type.exerciseView) {
             VStack {
                 HStack(spacing: 2) {
                     

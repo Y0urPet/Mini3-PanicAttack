@@ -55,7 +55,7 @@ enum ExerciseType: Codable {
     var description: String {
         switch self {
         case .breathing:
-            return "Find calm with each breath djwoduhw iwodwdh diwhdiwodh"
+            return "Find calm with each breath"
         case .grounding:
             return "Stay present through your senses"
         case .HALT:
@@ -66,6 +66,23 @@ enum ExerciseType: Codable {
             return "Shift your perspective into a more positive one"
         case .visualizing:
             return "Picture your calm and think more clearly"
+        }
+    }
+    
+    var exerciseView: some View {
+        switch self {
+        case .breathing:
+            return BreathingExerciseView()
+        case .grounding:
+            return BreathingExerciseView()
+        case .HALT:
+            return BreathingExerciseView()
+        case .PMR:
+            return BreathingExerciseView()
+        case .thinking:
+            return BreathingExerciseView()
+        case .visualizing:
+            return BreathingExerciseView()
         }
     }
     

@@ -183,7 +183,6 @@
 		2BA883042C73AE45008365C8 /* Mini3-PanicAttack */ = {
 			isa = PBXGroup;
 			children = (
-				A44A58DF2C7725CE00F8E883 /* Font */,
 				A44A58C72C7725A300F8E883 /* Views */,
 				A44A58BA2C77259500F8E883 /* ViewModel */,
 				A44A58B52C77258C00F8E883 /* Utils */,
@@ -191,7 +190,7 @@
 				A44A58A62C77257700F8E883 /* Protocols */,
 				A44A58A12C77256800F8E883 /* Model */,
 				A44A589B2C77255600F8E883 /* Extensions */,
-				A44A58912C77254800F8E883 /* Components */,
+				A44A58DF2C7725CE00F8E883 /* Font */,
 				2BA883052C73AE45008365C8 /* Mini3_PanicAttackApp.swift */,
 				A44A58F12C77272C00F8E883 /* breathingExerciseSound.mp3 */,
 				2BA883092C73AE46008365C8 /* Assets.xcassets */,
@@ -322,10 +321,10 @@
 		A44A58C02C7725A300F8E883 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A44A58BC2C7725A300F8E883 /* ExerciseCardView.swift */,
 				A44A58BD2C7725A300F8E883 /* ExerciseContentView.swift */,
 				A44A58BE2C7725A300F8E883 /* WeeklyStreakView.swift */,
 				A44A58BF2C7725A300F8E883 /* WideCardViewWithProgress.swift */,
+				A44A58BC2C7725A300F8E883 /* ExerciseCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -344,6 +343,7 @@
 			children = (
 				A44A58C62C7725A300F8E883 /* ContentView.swift */,
 				A44A58C52C7725A300F8E883 /* CongratulationView.swift */,
+				A44A58912C77254800F8E883 /* Components */,
 				A44A58F52C775D5300F8E883 /* Breathing */,
 				A44A58C22C7725A300F8E883 /* Main */,
 			);

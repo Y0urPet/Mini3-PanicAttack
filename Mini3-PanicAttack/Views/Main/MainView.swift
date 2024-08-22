@@ -125,6 +125,7 @@ struct MainView: View {
                 Color.white,
                 for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
+            .navigationBarBackButtonHidden()
         }
     }
 }
