@@ -11,7 +11,7 @@ import SwiftData
 
 struct MainView: View {
     @Environment(ExerciseTrackerViewModel.self) private var viewModel: ExerciseTrackerViewModel
-    private var minimumValidStreak = 3
+    private var minimumValidStreak = 1
 
     // Every exercise is not used to keep track of progress
     // Progress defaults to 0%
@@ -128,7 +128,7 @@ struct MainView: View {
             .navigationBarBackButtonHidden()
         }
         .refreshable {
-            viewModel.load()
+            viewModel.refresh()
         }
     }
 }

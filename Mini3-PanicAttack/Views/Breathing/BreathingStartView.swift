@@ -15,11 +15,12 @@ struct BreathingStartView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 24)
-                .frame(width: .infinity, height: .infinity)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
                 .foregroundStyle(.white)
-                .offset(y: 175)
+                .offset(y: 225)
             
             VStack(alignment: .leading) {
+                Spacer()
                 HStack {
                     Image(.backButton)
                         .resizable()
@@ -32,7 +33,7 @@ struct BreathingStartView: View {
                     Text("Deep Breathing")
                         .font(Font.custom("Rubik-SemiBold", size: 24))
                 }
-                .padding(.vertical, 30)
+                .padding(.vertical, 20)
                 
                 HStack {
                     Spacer()
@@ -86,12 +87,16 @@ struct BreathingStartView: View {
                     
                     Spacer()
                 }
-                
+                Spacer()
             }
             .padding(.horizontal)
             .navigationBarBackButtonHidden(true)
-            .background(.neutral100)
         }
+        .background(.neutral100)
     }
 }
+
+//#Preview {
+//    BreathingStartView()
+//}
 

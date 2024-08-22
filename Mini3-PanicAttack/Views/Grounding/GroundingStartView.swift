@@ -15,9 +15,9 @@ struct GroundingStartView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 24)
-                .frame(width: .infinity, height: .infinity)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
                 .foregroundStyle(.white)
-                .offset(y: 175)
+                .offset(y: 225)
             
             VStack(alignment: .leading) {
                 HStack {
@@ -66,7 +66,6 @@ struct GroundingStartView: View {
                     .foregroundStyle(.neutral500)
                     .padding(.leading, 10)
                 
-                Spacer()
                 HStack {
                     Spacer()
                         Button(action: {
@@ -86,12 +85,13 @@ struct GroundingStartView: View {
                     
                     Spacer()
                 }
+                .padding(.top, 32)
                 
             }
             .padding(.horizontal)
             .navigationBarBackButtonHidden(true)
-            .background(.neutral100)
         }
+        .background(.neutral100)
     }
 }
 

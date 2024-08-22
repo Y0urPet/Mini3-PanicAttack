@@ -32,6 +32,25 @@ class ExerciseTrackerViewModel {
         return todaysExercise?.type == exercise
     }
     
+    func refresh() {
+        do {
+            if let tracker = try repository.fetchExerciseTracker() {
+                self.tracker = tracker
+            } else {
+                let singletonTracker = try repository.insertDefaultExerciseTracker()
+                self.tracker = singletonTracker
+            }
+            
+            // If end of month add freezeStreakCount
+            // TODO: Fix this, to add freeze streak at the end of month
+//            self.refreshFreezeStreak()
+            
+            self.autoFreezeStreaks()
+        } catch {
+            print("Fetch failed: \(error)")
+        }
+    }
+    
     func load() {
         do {
             if let tracker = try repository.fetchExerciseTracker() {
@@ -47,6 +66,9 @@ class ExerciseTrackerViewModel {
             // If end of month add freezeStreakCount
             // TODO: Fix this, to add freeze streak at the end of month
 //            self.refreshFreezeStreak()
+            
+            
+            self.autoFreezeStreaks()
             
         } catch {
             print("Fetch failed: \(error)")

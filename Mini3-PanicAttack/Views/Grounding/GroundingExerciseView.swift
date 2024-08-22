@@ -27,7 +27,7 @@ struct GroundingExerciseView: View {
             
             // If session/exercise is finished show CongratsView
             } else {
-                CongratulationView(exerciseTitle: "Grounding Exercise")
+                CongratulationView(exerciseTitle: "Grounding")
                     .onAppear {
                         if viewModel.isTodaysExercise(of: .grounding) {
                             viewModel.markTodaysAsCompleted()
