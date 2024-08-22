@@ -16,7 +16,9 @@ struct Mini3_PanicAttackApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            //BreathingSessionView()
+            BreathingExerciseView()
         }
         .modelContainer(container)
         .environment(viewModel)
