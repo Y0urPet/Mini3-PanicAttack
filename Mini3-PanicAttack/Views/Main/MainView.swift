@@ -11,6 +11,7 @@ import SwiftData
 
 struct MainView: View {
     @Environment(ExerciseTrackerViewModel.self) private var viewModel: ExerciseTrackerViewModel
+    private var minimumValidStreak = 1
 
     // Every exercise is not used to keep track of progress
     // Progress defaults to 0%
@@ -42,7 +43,7 @@ struct MainView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: 20)
-                            Text("\(viewModel.tracker?.currentStreak(min: 3) ?? -1)")
+                            Text("\(viewModel.tracker?.currentStreak(min: minimumValidStreak) ?? -1)")
                             
                             // MARK: - Divider
                             Text("|")
@@ -63,7 +64,7 @@ struct MainView: View {
                         
                         
                         // MARK: - Streak calendar comp.
-                        WeeklyStreakView(viewModel: viewModel)
+                        WeeklyStreakView(viewModel: viewModel, validMin: minimumValidStreak)
                             .padding(.top, 8)
                     }
                     

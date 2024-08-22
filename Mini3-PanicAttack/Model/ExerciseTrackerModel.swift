@@ -47,7 +47,7 @@ enum StreakType: String, CaseIterable, Codable, Hashable {
     
     
 
-    init(lastExercise: ExerciseType = .visualizing, freezeStreakCount: Int = 4, dailyStreaks: [DailyStreak] = []) {
+    init(lastExercise: ExerciseType = .visualizing, freezeStreakCount: Int = 2, dailyStreaks: [DailyStreak] = []) {
         self.lastExercise = lastExercise
         self.freezeStreakCount = freezeStreakCount
         self.dailyStreaks = dailyStreaks
