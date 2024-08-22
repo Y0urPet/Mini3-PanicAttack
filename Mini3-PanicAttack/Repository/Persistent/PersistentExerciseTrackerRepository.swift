@@ -38,7 +38,7 @@ class PersistentExerciseTrackerRepository: ExerciseTrackerRepository {
     }
     
     func insertDefaultExerciseTracker()  throws -> ExerciseTracker {
-        let singletonTracker = ExerciseTracker(lastExercise: .visualizing, daysExercised: [])
+        let singletonTracker = ExerciseTracker(lastExercise: .visualizing)
         modelContext.insert(singletonTracker)
         return singletonTracker
     }
