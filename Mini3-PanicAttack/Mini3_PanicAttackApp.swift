@@ -6,14 +6,32 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct Mini3_PanicAttackApp: App {
+    
+    let container: ModelContainer
+    let viewModel: ExerciseTrackerViewModel
+    
     var body: some Scene {
         WindowGroup {
 //            ContentView()
             //BreathingSessionView()
             BreathingExerciseView()
+        }
+        .modelContainer(container)
+        .environment(viewModel)
+    }
+    
+    init() {
+        do {
+            // TODO: Change to store persistently
+            let config = ModelConfiguration(isStoredInMemoryOnly: true)
+            container = try ModelContainer(for: ExerciseTracker.self, configurations: config)
+            viewModel = ExerciseTrackerViewModel(modelContext: container.mainContext)
+        } catch {
+            fatalError("Failed to create ModelContainer")
         }
     }
 }
