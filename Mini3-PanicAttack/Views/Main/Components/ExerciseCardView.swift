@@ -28,7 +28,7 @@ struct ExerciseCardView: View {
                 Image(imageThumb)
                     .resizable()
                     .aspectRatio(contentMode: .fill) // Fill the frame while maintaining aspect ratio
-                    .frame(width: 200, height: 125) // Fixed width and height for all cards
+                    .frame(width: 200, height: 130) // Fixed width and height for all cards
                     .clipped() // Clips the image to fit within the specified frame
                 
                 HStack {
@@ -39,14 +39,14 @@ struct ExerciseCardView: View {
                             .foregroundStyle(.black)
                         Text(subTitle)
                             .font(.system(size: 14))
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(.neutral400)
                     }
                     .multilineTextAlignment(.leading)
                     Spacer()
                 }
                 .padding()
             }
-            .frame(width: 200, height: 275) // Fixed width for the entire card
+            .frame(width: 200, height: 235) // Fixed width for the entire card
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }

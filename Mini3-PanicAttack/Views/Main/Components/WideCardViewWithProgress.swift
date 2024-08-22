@@ -34,7 +34,7 @@ struct WideCardViewWithProgress: View {
                         Text(subTitle)
                             .font(.system(size: 14))
                             .fontWeight(.regular)
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(.neutral400)
                     }
                     Spacer()
                     
@@ -50,10 +50,13 @@ struct WideCardViewWithProgress: View {
                 // Progress Bar
                 HStack(alignment: .lastTextBaseline, spacing: 12) {
                     ProgressView(value: Float(progress), total: 100)
-                    .scaleEffect(y: 1.5) // Sets ProgressView height
+                    .scaleEffect(y: 1.75) // Sets ProgressView height
+                    .tint(.primary500)
                     
                     Text("\(progress)%")
                         .font(.system(size: 10))
+                        .foregroundStyle(.neutral900)
+                
                 }
                 .padding(.horizontal)
                 .padding(.bottom, 16)

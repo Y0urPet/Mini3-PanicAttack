@@ -37,7 +37,7 @@ struct MainView: View {
                             
                             // MARK: - Streak count
                             Text("Count:")
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.neutral500)
                             Image(.fire)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
@@ -50,7 +50,7 @@ struct MainView: View {
                             
                             // MARK: - Freeze Streak
                             Text("Freeze Streak:")
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.neutral500)
                             Image(.blueFire)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
@@ -77,7 +77,7 @@ struct MainView: View {
                         }
                         HStack {
                             Text("Complete this practice to build your streak")
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.neutral500)
                                 .font(.system(size: 14))
                             Spacer()
                         }
@@ -97,7 +97,7 @@ struct MainView: View {
                         }
                         HStack {
                             Text("Do these steps to prepare for emergencies")
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.neutral500)
                                 .font(.system(size: 14))
                             Spacer()
                         }
@@ -140,7 +140,7 @@ struct MainView: View {
 //    vm.loadDummyData()
     
     // Sets to 100%
-    vm.setTodaysProgress(to: 100)
+//    vm.setTodaysProgress(to: 100)
     
 //     Auto freeze streak
     vm.autoFreezeStreaks()

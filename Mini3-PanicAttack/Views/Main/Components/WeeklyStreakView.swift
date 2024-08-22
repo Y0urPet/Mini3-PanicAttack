@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WeeklyStreakView: View {
     @State var viewModel: ExerciseTrackerViewModel
-    private var validStreaks: [DailyStreak]
+    @State var validStreaks: [DailyStreak] = []
     private var validMin: Int = 2
     
     init(viewModel: ExerciseTrackerViewModel) {
@@ -24,7 +24,7 @@ struct WeeklyStreakView: View {
                     Text(day.abbreviated)
                         .font(.system(size: 13))
                         .fontWeight(.bold)
-                        .foregroundStyle(Calendar.current.isDateInToday(day.date) ? .blue : .gray)
+                        .foregroundStyle(Calendar.current.isDateInToday(day.date) ? .primary600 : .neutral300)
                         .padding(.bottom, 4)
                     
                     Image(getStreakImageType(for: day.date))
@@ -40,6 +40,9 @@ struct WeeklyStreakView: View {
         .padding(.horizontal)
         .frame(maxWidth: .infinity)
         .background(Color(.white).clipShape(RoundedRectangle(cornerRadius: 12)))
+        .onAppear {
+            self.validStreaks = viewModel.tracker?.getStreakData(min: validMin) ?? []
+        }
     }
     
     // Function to get the days of the current week
@@ -59,7 +62,7 @@ struct WeeklyStreakView: View {
     
     // Function to get the image based on streak type for a given date
     private func getStreakImageType(for date: Date) -> ImageResource {
-        guard let tracker = viewModel.tracker else { return .fireSkeleton }
+        guard let _ = viewModel.tracker else { return .fireSkeleton }
         
         let calendar = Calendar.current
         let dayDate = calendar.startOfDay(for: date)
@@ -67,10 +70,6 @@ struct WeeklyStreakView: View {
         if let streak = validStreaks.first(where: { calendar.startOfDay(for: $0.date) == dayDate }) {
             return streak.streakType.icon
         }
-        
-//        if let streak = tracker.getStreakData(min: 2).first(where: { calendar.startOfDay(for: $0.date) == dayDate }) {
-//            return streak.streakType.icon
-//        }
         
         return .fireSkeleton
     }

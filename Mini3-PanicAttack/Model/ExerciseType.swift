@@ -38,34 +38,34 @@ enum ExerciseType: Codable {
     var title: String {
         switch self {
         case .breathing:
-            return "Breathing Exercise"
+            return "Deep Breathing"
         case .grounding:
-            return "Grounding Technique"
+            return "Grounding"
         case .HALT:
-            return "H.A.L.T Technique"
+            return "H.A.L.T"
         case .PMR:
-            return "Progressive Muscle Relaxation"
+            return "PMR"
         case .thinking:
-            return "Stop Catastrophic Thinking"
+            return "Think Clearly"
         case .visualizing:
-            return "Visualization Exercise"
+            return "Visualization"
         }
     }
     
     var description: String {
         switch self {
         case .breathing:
-            return "Breathing Exercise"
+            return "Find calm with each breath"
         case .grounding:
-            return "Grounding Technique"
+            return "Stay present through your senses"
         case .HALT:
-            return "H.A.L.T Technique"
+            return "Being mindful of your current emotions"
         case .PMR:
-            return "Progressive Muscle Relaxation"
+            return "Relax your muscle and ease tension gradually"
         case .thinking:
-            return "Stop Catastrophic Thinking"
+            return "Shift your perspective into a more positive one"
         case .visualizing:
-            return "Visualization Exercise"
+            return "Picture your calm and think more clearly"
         }
     }
     
@@ -74,15 +74,15 @@ enum ExerciseType: Codable {
         case .breathing:
             return .thumbBreathing
         case .grounding:
-            return .thumbBreathing
+            return .thumbGrounding
         case .HALT:
-            return .thumbBreathing
+            return .thumbHalt
         case .PMR:
-            return .thumbBreathing
+            return .thumbPmr
         case .thinking:
-            return .thumbBreathing
+            return .thumbThinking
         case .visualizing:
-            return .thumbBreathing
+            return .thumbVisualizing
         }
     }
 }
