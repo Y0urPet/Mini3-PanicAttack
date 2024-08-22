@@ -112,7 +112,6 @@ class ExerciseTrackerViewModel {
         setTodaysProgress(to: 100)
     }
     
-    
     func setTodaysProgress(to progress: Int) {
         guard let tracker = self.tracker else { return }
 
@@ -126,10 +125,13 @@ class ExerciseTrackerViewModel {
                 // Update the last exercise type for next day's exercise
                 tracker.lastExercise = todaysExercise.type
                 
-                // Add a new daily streak entry
-                let calendar = Calendar.current
-                let today = calendar.startOfDay(for: Date())
-                tracker.dailyStreaks.append(DailyStreak(date: today, streakType: .exercise))
+                // Check if there is already a daily streak entry for today
+                if let existingStreak = tracker.dailyStreaks.first(where: { Calendar.current.startOfDay(for: $0.date) == Calendar.current.startOfDay(for: Date()) }) {
+                    print("No need to add new daily streak entry for today")
+                } else {
+                    // Add a new daily streak entry
+                    tracker.dailyStreaks.append(DailyStreak(date: Calendar.current.startOfDay(for: Date()), streakType: .exercise))
+                }
                 
                 todaysExercise.progress = 100
                 self.todaysExercise?.progress = 100
@@ -144,18 +146,6 @@ class ExerciseTrackerViewModel {
                 try repository.saveExerciseTracker(tracker)
             } catch {
                 print("Error saving exercise: \(error)")
-            }
-            
-//            // Update the current exercise if it's already completed or if it's not the same as the previous one
-//            if todaysExercise.isCompleted || (tracker.lastExercise != todaysExercise.type) {
-//                self.todaysExercise = Exercise(type: tracker.lastExercise, progress: 0)
-//            }
-//            
-            // Save the updated tracker
-            do {
-                try repository.saveExerciseTracker(tracker)
-            } catch {
-                print("Error saving tracker: \(error)")
             }
         }
     }
