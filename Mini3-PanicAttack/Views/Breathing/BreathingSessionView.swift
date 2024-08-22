@@ -38,6 +38,8 @@ struct BreathingSessionView: View {
     //Breath animation state
     @State var breathStateActive = false
     
+    @State private var triggerToHome = false
+    
     //Cycle count
     //@StateObject var cycleCountManager = CycleCountManager()
     @ObservedObject var manager: CycleCountManager
@@ -130,14 +132,20 @@ struct BreathingSessionView: View {
             .ignoresSafeArea()
             .background(.neutral100)
             .offset(y: 20)
-            
+        
         Image(.blueCross)
             .resizable()
             .frame(width: 32, height: 32)
             .aspectRatio(contentMode: .fill)
             .offset(x: -50, y: 20)
+            .onChange(of: triggerToHome, initial: true) {
+                if triggerToHome {
+                    triggerToHome.toggle()
+                    dismiss()
+                }
+            }
             .onTapGesture {
-                dismiss()
+                ExitPopupView(triggerToHome: $triggerToHome).showAndStack()
             }
         }
         .backgroundStyle(.neutral100)

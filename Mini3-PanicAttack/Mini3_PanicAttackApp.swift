@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import MijickPopupView
 
 @main
 struct Mini3_PanicAttackApp: App {
@@ -16,12 +17,10 @@ struct Mini3_PanicAttackApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            //BreathingSessionView()
-            ContentView()
+            ContentView().implementPopupView()
         }
-        .modelContainer(container)
-        .environment(viewModel)
+            .modelContainer(container)
+            .environment(viewModel)
     }
     
     init() {

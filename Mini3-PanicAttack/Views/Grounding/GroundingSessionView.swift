@@ -33,6 +33,7 @@ struct GroundingSessionView: View {
     
     //Breath animation state
     @State var breathStateActive = false
+    @State private var triggerToHome = false
     
     //@StateObject var cycleCountManager = CycleCountManager()
     @ObservedObject var manager: CycleCountManager
@@ -151,7 +152,7 @@ struct GroundingSessionView: View {
                                     .background(.primary600)
                                     .clipShape(.rect(cornerRadius: 53))
                             })
-                            .padding(.top, 10)
+                            .padding(.top, 24)
                             .padding(.bottom, 32)
                         
                         Spacer()
@@ -169,9 +170,15 @@ struct GroundingSessionView: View {
             .resizable()
             .frame(width: 32, height: 32)
             .aspectRatio(contentMode: .fill)
-            .offset(x: -50, y: 20)
+            .offset(x: -50, y: 20)   
+            .onChange(of: triggerToHome, initial: true) {
+                if triggerToHome {
+                    triggerToHome.toggle()
+                    dismiss()
+                }
+            }
             .onTapGesture {
-                dismiss()
+                ExitPopupView(triggerToHome: $triggerToHome).showAndStack()
             }
         }
         .background(.neutral100)
