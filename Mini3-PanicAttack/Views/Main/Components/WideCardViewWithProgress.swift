@@ -26,6 +26,7 @@ struct WideCardViewWithProgress: View {
         NavigationLink(destination: ExerciseContentView(exercise: exercise)) {
             VStack {
                 HStack(spacing: 2) {
+                    
                     VStack(alignment: .leading, spacing: 6) {
                         Text(title)
                             .font(.system(size: 20))
@@ -36,6 +37,11 @@ struct WideCardViewWithProgress: View {
                             .fontWeight(.regular)
                             .foregroundStyle(.neutral400)
                     }
+                    .multilineTextAlignment(.leading)
+                    .padding(.trailing, 10)
+                    .padding(.leading, 5)
+                    .padding(.top, 8)
+                    
                     Spacer()
                     
                     Image(imageThumb)
@@ -43,6 +49,7 @@ struct WideCardViewWithProgress: View {
                         .aspectRatio(contentMode: .fill) // Fill the frame
                         .clipShape(.rect(cornerRadius: 8))
                         .frame(width: UIScreen.main.bounds.width/3)
+                    Spacer()
                 }
                 .padding(.horizontal, 16)
                 .padding(.vertical, 12)
@@ -66,5 +73,9 @@ struct WideCardViewWithProgress: View {
         .frame(maxWidth: .infinity)
         }
     }
+}
+
+#Preview {
+    WideCardViewWithProgress(exercise: Exercise(type: .HALT))
 }
 

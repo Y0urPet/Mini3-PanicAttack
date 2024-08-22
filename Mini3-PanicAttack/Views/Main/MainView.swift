@@ -140,16 +140,14 @@ struct MainView: View {
     // Load data
 //    vm.loadDummyData()
     
+    
     // Sets to 100%
 //    vm.setTodaysProgress(to: 100)
+    
     
 //     Auto freeze streak
     vm.autoFreezeStreaks()
 //    print("LEN: \(vm.tracker?.dailyStreaks.count)")
-    
-//    let data = vm.tracker?.getStreakData(min: 3)
-//    print(data)
-//    print(data?.count)
     
     return MainView()
         .modelContainer(container).modelContainer(container)

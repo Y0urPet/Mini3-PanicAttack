@@ -52,3 +52,7 @@ struct ExerciseCardView: View {
         }
     }
 }
+
+#Preview {
+    ExerciseCardView(exercise: Exercise(type: .HALT))
+}

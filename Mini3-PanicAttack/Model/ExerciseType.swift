@@ -55,7 +55,7 @@ enum ExerciseType: Codable {
     var description: String {
         switch self {
         case .breathing:
-            return "Find calm with each breath"
+            return "Find calm with each breath djwoduhw iwodwdh diwhdiwodh"
         case .grounding:
             return "Stay present through your senses"
         case .HALT:
