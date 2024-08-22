@@ -9,8 +9,7 @@ import Foundation
 import AVFoundation
 
 class AudioPlayerManager: AudioPlayer {
-    var audioPlayer: AVAudioPlayer?
-    
+    var audioPlayer: AVAudioPlayer?    
     func play() {
         guard let soundpath = Bundle.main.path(forResource: "breathingExerciseSound", ofType: "mp3") else {
             return print("error load music")
