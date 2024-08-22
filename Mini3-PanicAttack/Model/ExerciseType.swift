@@ -74,7 +74,7 @@ enum ExerciseType: Codable {
         case .breathing:
             return BreathingExerciseView()
         case .grounding:
-            return BreathingExerciseView()
+            return GroundingExerciseView()
         case .HALT:
             return BreathingExerciseView()
         case .PMR:

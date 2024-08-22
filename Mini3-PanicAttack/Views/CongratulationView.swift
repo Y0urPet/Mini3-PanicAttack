@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct CongratulationView: View {
+    
+    var exerciseTitle: String
+    
+    @Environment(\.dismiss) private var dismiss
+    
     var body: some View {
         ZStack {
             VStack {
-                //Image(uiImage: UIImage(named: "x_button")!)
-                    //.frame(maxWidth: .infinity, alignment: .trailing)
                 Spacer()
                 Image(uiImage: UIImage(named: "congratsAsset")!)
                     .padding(44)
@@ -25,16 +28,17 @@ struct CongratulationView: View {
                     .foregroundStyle(Color(red: 0.40784313725490196, green: 0.4549019607843137, blue: 0.5372549019607843))
                     .padding(2)
                     .multilineTextAlignment(.center)
-                Button {
-                    
-                } label: {
+                Button(action: {
+                    print("dismissed congrats view")
+                    dismiss()
+                }, label: {
                     Text("Next Practice")
                         .font(Font.custom("Rubik-SemiBold", size: 17))
                         .foregroundStyle(.white)
                         .frame(width: 360, height: 48)
                         .background(Color(red: 0.2, green: 0.3137254901960784, blue: 0.7215686274509804))
                         .clipShape(.rect(cornerRadius: 53))
-                }
+                })
                 .padding(16)
                 Spacer()
             }
@@ -49,5 +53,5 @@ struct CongratulationView: View {
 }
 
 #Preview {
-    CongratulationView()
+    CongratulationView(exerciseTitle: "Preview Exercise")
 }

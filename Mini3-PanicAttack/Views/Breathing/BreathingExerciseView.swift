@@ -8,16 +8,33 @@
 import SwiftUI
 
 struct BreathingExerciseView: View {
+    @Environment(ExerciseTrackerViewModel.self) private var viewModel
     @StateObject var cycleCountManager = CycleCountManager()
+    @State var started: Bool = false
     
     var body: some View {
         ZStack {
-            if(cycleCountManager.isCycleFinished) {
-                CongratulationView()
-            } else {
-                BreathingSessionView(manager: cycleCountManager)
+            if !started {
+                BreathingStartView(started: $started)
             }
-        }.navigationBarBackButtonHidden(true)
+            
+            else if (!cycleCountManager.isCycleFinished) {
+                BreathingSessionView(manager: cycleCountManager)
+               
+            } 
+            
+            
+            else {
+                CongratulationView(exerciseTitle: "Breathing Exercise")
+                    .onAppear {
+                        if viewModel.isTodaysExercise(of: .breathing) {
+                            viewModel.markTodaysAsCompleted()
+                        }
+                    }
+            }
+        }
+        .background(.neutral100)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

@@ -128,7 +128,7 @@ struct BreathingSessionView: View {
             }
             .frame(maxWidth: .infinity)
             .ignoresSafeArea()
-            .background(.white)
+            .background(.neutral100)
             .offset(y: 20)
             
         Image(.blueCross)
@@ -140,5 +140,7 @@ struct BreathingSessionView: View {
                 dismiss()
             }
         }
+        .ignoresSafeArea()
+        .backgroundStyle(.neutral100)
     }
 }

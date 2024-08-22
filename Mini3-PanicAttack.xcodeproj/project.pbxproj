@@ -58,6 +58,12 @@
 		A44A58F02C77270200F8E883 /* Buzz in Frameworks */ = {isa = PBXBuildFile; productRef = A44A58EF2C77270200F8E883 /* Buzz */; };
 		A44A58F22C77272C00F8E883 /* breathingExerciseSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A44A58F12C77272C00F8E883 /* breathingExerciseSound.mp3 */; };
 		A44A58F42C775D1600F8E883 /* BreathingSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58F32C775D1600F8E883 /* BreathingSessionView.swift */; };
+		A44A58F82C776CCB00F8E883 /* GroundingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58F72C776CCB00F8E883 /* GroundingStartView.swift */; };
+		A44A58FA2C77864E00F8E883 /* GroundingExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58F92C77864E00F8E883 /* GroundingExerciseView.swift */; };
+		A44A58FC2C77875A00F8E883 /* GroundingSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58FB2C77875A00F8E883 /* GroundingSessionView.swift */; };
+		A44A59002C77895600F8E883 /* GenericInactiveWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58FF2C77895600F8E883 /* GenericInactiveWave.swift */; };
+		A44A59022C7789C100F8E883 /* GenericAnimatedWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A59012C7789C100F8E883 /* GenericAnimatedWave.swift */; };
+		A44A59052C77A67B00F8E883 /* BreathingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A59042C77A67B00F8E883 /* BreathingStartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +138,12 @@
 		A44A58DE2C7725CE00F8E883 /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		A44A58F12C77272C00F8E883 /* breathingExerciseSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = breathingExerciseSound.mp3; sourceTree = "<group>"; };
 		A44A58F32C775D1600F8E883 /* BreathingSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSessionView.swift; sourceTree = "<group>"; };
+		A44A58F72C776CCB00F8E883 /* GroundingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundingStartView.swift; sourceTree = "<group>"; };
+		A44A58F92C77864E00F8E883 /* GroundingExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundingExerciseView.swift; sourceTree = "<group>"; };
+		A44A58FB2C77875A00F8E883 /* GroundingSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundingSessionView.swift; sourceTree = "<group>"; };
+		A44A58FF2C77895600F8E883 /* GenericInactiveWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInactiveWave.swift; sourceTree = "<group>"; };
+		A44A59012C7789C100F8E883 /* GenericAnimatedWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericAnimatedWave.swift; sourceTree = "<group>"; };
+		A44A59042C77A67B00F8E883 /* BreathingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingStartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,18 +237,19 @@
 			path = "Mini3-PanicAttackUITests";
 			sourceTree = "<group>";
 		};
-		A44A58912C77254800F8E883 /* Components */ = {
+		A44A58912C77254800F8E883 /* Global Components */ = {
 			isa = PBXGroup;
 			children = (
-				A44A588A2C77254800F8E883 /* BreathingAnimationComponent.swift */,
-				A44A588B2C77254800F8E883 /* BreathingInactiveComponent.swift */,
+				A44A59032C778A0400F8E883 /* Extensions */,
 				A44A588C2C77254800F8E883 /* HapticButtonComponent.swift */,
 				A44A588D2C77254800F8E883 /* MusicButtonComponent.swift */,
 				A44A588E2C77254800F8E883 /* PauseButtonComponent.swift */,
 				A44A588F2C77254800F8E883 /* PlayButtonComponent.swift */,
 				A44A58902C77254800F8E883 /* ProgressBarComponent.swift */,
+				A44A58FF2C77895600F8E883 /* GenericInactiveWave.swift */,
+				A44A59012C7789C100F8E883 /* GenericAnimatedWave.swift */,
 			);
-			path = Components;
+			path = "Global Components";
 			sourceTree = "<group>";
 		};
 		A44A589B2C77255600F8E883 /* Extensions */ = {
@@ -343,7 +356,8 @@
 			children = (
 				A44A58C62C7725A300F8E883 /* ContentView.swift */,
 				A44A58C52C7725A300F8E883 /* CongratulationView.swift */,
-				A44A58912C77254800F8E883 /* Components */,
+				A44A58912C77254800F8E883 /* Global Components */,
+				A44A58F62C776CB000F8E883 /* Grounding */,
 				A44A58F52C775D5300F8E883 /* Breathing */,
 				A44A58C22C7725A300F8E883 /* Main */,
 			);
@@ -374,10 +388,46 @@
 		A44A58F52C775D5300F8E883 /* Breathing */ = {
 			isa = PBXGroup;
 			children = (
+				A44A58FD2C77893400F8E883 /* Components */,
+				A44A59042C77A67B00F8E883 /* BreathingStartView.swift */,
 				A44A58F32C775D1600F8E883 /* BreathingSessionView.swift */,
 				A44A58C32C7725A300F8E883 /* BreathingExerciseView.swift */,
 			);
 			path = Breathing;
+			sourceTree = "<group>";
+		};
+		A44A58F62C776CB000F8E883 /* Grounding */ = {
+			isa = PBXGroup;
+			children = (
+				A44A58FE2C77893E00F8E883 /* Components */,
+				A44A58F72C776CCB00F8E883 /* GroundingStartView.swift */,
+				A44A58FB2C77875A00F8E883 /* GroundingSessionView.swift */,
+				A44A58F92C77864E00F8E883 /* GroundingExerciseView.swift */,
+			);
+			path = Grounding;
+			sourceTree = "<group>";
+		};
+		A44A58FD2C77893400F8E883 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A44A588B2C77254800F8E883 /* BreathingInactiveComponent.swift */,
+				A44A588A2C77254800F8E883 /* BreathingAnimationComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A44A58FE2C77893E00F8E883 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A44A59032C778A0400F8E883 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,10 +584,13 @@
 				A44A589C2C77255600F8E883 /* BreathingAnimationComponentExtension.swift in Sources */,
 				A44A58962C77254800F8E883 /* PauseButtonComponent.swift in Sources */,
 				A44A58A22C77256800F8E883 /* Exercise.swift in Sources */,
+				A44A58FA2C77864E00F8E883 /* GroundingExerciseView.swift in Sources */,
 				A44A58B12C77258100F8E883 /* ExerciseTrackerRepository.swift in Sources */,
 				A44A58CD2C7725A300F8E883 /* BreathingExerciseView.swift in Sources */,
 				A44A58D02C7725A300F8E883 /* ContentView.swift in Sources */,
+				A44A58FC2C77875A00F8E883 /* GroundingSessionView.swift in Sources */,
 				A44A58CB2C7725A300F8E883 /* WideCardViewWithProgress.swift in Sources */,
+				A44A59002C77895600F8E883 /* GenericInactiveWave.swift in Sources */,
 				A44A58CA2C7725A300F8E883 /* WeeklyStreakView.swift in Sources */,
 				A44A58CC2C7725A300F8E883 /* MainView.swift in Sources */,
 				A44A58982C77254800F8E883 /* ProgressBarComponent.swift in Sources */,
@@ -550,11 +603,14 @@
 				A44A58B62C77258C00F8E883 /* AudioPlayerManager.swift in Sources */,
 				A44A58A72C77257700F8E883 /* AudioPlayerProtocol.swift in Sources */,
 				A44A58B72C77258C00F8E883 /* CycleCountManager.swift in Sources */,
+				A44A59022C7789C100F8E883 /* GenericAnimatedWave.swift in Sources */,
 				A44A58932C77254800F8E883 /* BreathingInactiveComponent.swift in Sources */,
 				A44A58A32C77256800F8E883 /* ExerciseTrackerModel.swift in Sources */,
 				A44A58972C77254800F8E883 /* PlayButtonComponent.swift in Sources */,
+				A44A58F82C776CCB00F8E883 /* GroundingStartView.swift in Sources */,
 				A44A58C92C7725A300F8E883 /* ExerciseContentView.swift in Sources */,
 				A44A58B02C77258100F8E883 /* PersistentExerciseTrackerRepository.swift in Sources */,
+				A44A59052C77A67B00F8E883 /* BreathingStartView.swift in Sources */,
 				A44A58F42C775D1600F8E883 /* BreathingSessionView.swift in Sources */,
 				A44A58952C77254800F8E883 /* MusicButtonComponent.swift in Sources */,
 				A44A58B82C77258C00F8E883 /* HapticsManager.swift in Sources */,
