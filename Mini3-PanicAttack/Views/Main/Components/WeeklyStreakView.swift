@@ -9,6 +9,13 @@ import SwiftUI
 
 struct WeeklyStreakView: View {
     @State var viewModel: ExerciseTrackerViewModel
+    private var validStreaks: [DailyStreak]
+    private var validMin: Int = 2
+    
+    init(viewModel: ExerciseTrackerViewModel) {
+        self.viewModel = viewModel
+        self.validStreaks = viewModel.tracker?.getStreakData(min: validMin) ?? []
+    }
     
     var body: some View {
         HStack(spacing: 16) {
@@ -57,9 +64,13 @@ struct WeeklyStreakView: View {
         let calendar = Calendar.current
         let dayDate = calendar.startOfDay(for: date)
         
-        if let streak = tracker.dailyStreaks.first(where: { calendar.startOfDay(for: $0.date) == dayDate }) {
+        if let streak = validStreaks.first(where: { calendar.startOfDay(for: $0.date) == dayDate }) {
             return streak.streakType.icon
         }
+        
+//        if let streak = tracker.getStreakData(min: 2).first(where: { calendar.startOfDay(for: $0.date) == dayDate }) {
+//            return streak.streakType.icon
+//        }
         
         return .fireSkeleton
     }
