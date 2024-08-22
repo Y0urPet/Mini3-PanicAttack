@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B40CB722C77ABBA00AA7C45 /* Buzz in Frameworks */ = {isa = PBXBuildFile; productRef = 2B40CB712C77ABBA00AA7C45 /* Buzz */; };
 		2BA883062C73AE45008365C8 /* Mini3_PanicAttackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883052C73AE45008365C8 /* Mini3_PanicAttackApp.swift */; };
 		2BA8830A2C73AE46008365C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883092C73AE46008365C8 /* Assets.xcassets */; };
 		2BA8830D2C73AE46008365C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA8830C2C73AE46008365C8 /* Preview Assets.xcassets */; };
@@ -55,7 +56,6 @@
 		A44A58EB2C7725CE00F8E883 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58DC2C7725CE00F8E883 /* Rubik-Regular.ttf */; };
 		A44A58EC2C7725CE00F8E883 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58DD2C7725CE00F8E883 /* Rubik-SemiBold.ttf */; };
 		A44A58ED2C7725CE00F8E883 /* Rubik-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58DE2C7725CE00F8E883 /* Rubik-SemiBoldItalic.ttf */; };
-		A44A58F02C77270200F8E883 /* Buzz in Frameworks */ = {isa = PBXBuildFile; productRef = A44A58EF2C77270200F8E883 /* Buzz */; };
 		A44A58F22C77272C00F8E883 /* breathingExerciseSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A44A58F12C77272C00F8E883 /* breathingExerciseSound.mp3 */; };
 		A44A58F42C775D1600F8E883 /* BreathingSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58F32C775D1600F8E883 /* BreathingSessionView.swift */; };
 		A44A58F82C776CCB00F8E883 /* GroundingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58F72C776CCB00F8E883 /* GroundingStartView.swift */; };
@@ -151,7 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A44A58F02C77270200F8E883 /* Buzz in Frameworks */,
+				2B40CB722C77ABBA00AA7C45 /* Buzz in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +447,7 @@
 			);
 			name = "Mini3-PanicAttack";
 			packageProductDependencies = (
-				A44A58EF2C77270200F8E883 /* Buzz */,
+				2B40CB712C77ABBA00AA7C45 /* Buzz */,
 			);
 			productName = "Mini3-PanicAttack";
 			productReference = 2BA883022C73AE45008365C8 /* Mini3-PanicAttack.app */;
@@ -522,7 +522,7 @@
 			);
 			mainGroup = 2BA882F92C73AE45008365C8;
 			packageReferences = (
-				A44A58EE2C77270200F8E883 /* XCRemoteSwiftPackageReference "buzz" */,
+				2B40CB702C77ABBA00AA7C45 /* XCRemoteSwiftPackageReference "buzz" */,
 			);
 			productRefGroup = 2BA883032C73AE45008365C8 /* Products */;
 			projectDirPath = "";
@@ -782,7 +782,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini3-PanicAttack/Preview Content\"";
-				DEVELOPMENT_TEAM = YTWBVW7W5F;
+				DEVELOPMENT_TEAM = N2K3R4X37B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini3-PanicAttack/Info.plist";
@@ -814,7 +814,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini3-PanicAttack/Preview Content\"";
-				DEVELOPMENT_TEAM = YTWBVW7W5F;
+				DEVELOPMENT_TEAM = N2K3R4X37B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini3-PanicAttack/Info.plist";
@@ -955,7 +955,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A44A58EE2C77270200F8E883 /* XCRemoteSwiftPackageReference "buzz" */ = {
+		2B40CB702C77ABBA00AA7C45 /* XCRemoteSwiftPackageReference "buzz" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jiachenyee/buzz";
 			requirement = {
@@ -966,9 +966,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A44A58EF2C77270200F8E883 /* Buzz */ = {
+		2B40CB712C77ABBA00AA7C45 /* Buzz */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A44A58EE2C77270200F8E883 /* XCRemoteSwiftPackageReference "buzz" */;
+			package = 2B40CB702C77ABBA00AA7C45 /* XCRemoteSwiftPackageReference "buzz" */;
 			productName = Buzz;
 		};
 /* End XCSwiftPackageProductDependency section */
