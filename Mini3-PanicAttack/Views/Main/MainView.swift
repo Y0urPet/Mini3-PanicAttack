@@ -140,11 +140,6 @@ struct MainView: View {
     // Load data
 //    vm.loadDummyData()
     
-    
-    // Sets to 100%
-//    vm.setTodaysProgress(to: 100)
-    
-    
 //     Auto freeze streak
     vm.autoFreezeStreaks()
 //    print("LEN: \(vm.tracker?.dailyStreaks.count)")

@@ -8,38 +8,56 @@
 
 /* Begin PBXBuildFile section */
 		2BA883062C73AE45008365C8 /* Mini3_PanicAttackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883052C73AE45008365C8 /* Mini3_PanicAttackApp.swift */; };
-		2BA883082C73AE45008365C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883072C73AE45008365C8 /* ContentView.swift */; };
 		2BA8830A2C73AE46008365C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883092C73AE46008365C8 /* Assets.xcassets */; };
 		2BA8830D2C73AE46008365C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA8830C2C73AE46008365C8 /* Preview Assets.xcassets */; };
 		2BA883172C73AE46008365C8 /* Mini3_PanicAttackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883162C73AE46008365C8 /* Mini3_PanicAttackTests.swift */; };
 		2BA883212C73AE46008365C8 /* Mini3_PanicAttackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883202C73AE46008365C8 /* Mini3_PanicAttackUITests.swift */; };
 		2BA883232C73AE46008365C8 /* Mini3_PanicAttackUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883222C73AE46008365C8 /* Mini3_PanicAttackUITestsLaunchTests.swift */; };
-		2BA883322C73B076008365C8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883312C73B076008365C8 /* MainView.swift */; };
-		2BA8835C2C743470008365C8 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA8834C2C743314008365C8 /* Rubik-Medium.ttf */; };
-		2BA8835D2C743470008365C8 /* Rubik-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA8834A2C743314008365C8 /* Rubik-ExtraBoldItalic.ttf */; };
-		2BA8835E2C743470008365C8 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883472C743314008365C8 /* Rubik-SemiBold.ttf */; };
-		2BA8835F2C743470008365C8 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883482C743314008365C8 /* Rubik-Black.ttf */; };
-		2BA883602C743470008365C8 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883492C743314008365C8 /* Rubik-Italic.ttf */; };
-		2BA883612C743470008365C8 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883412C743313008365C8 /* Rubik-MediumItalic.ttf */; };
-		2BA883622C743470008365C8 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA8834D2C743314008365C8 /* Rubik-Bold.ttf */; };
-		2BA883632C743470008365C8 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883422C743313008365C8 /* Rubik-BlackItalic.ttf */; };
-		2BA883642C743470008365C8 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883462C743314008365C8 /* Rubik-BoldItalic.ttf */; };
-		2BA883652C743470008365C8 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883432C743313008365C8 /* Rubik-Regular.ttf */; };
-		2BA883662C743470008365C8 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883452C743314008365C8 /* Rubik-Light.ttf */; };
-		2BA883672C743470008365C8 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA8834B2C743314008365C8 /* Rubik-LightItalic.ttf */; };
-		2BA883682C743470008365C8 /* Rubik-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883442C743313008365C8 /* Rubik-SemiBoldItalic.ttf */; };
-		2BA883692C743470008365C8 /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883402C743313008365C8 /* Rubik-ExtraBold.ttf */; };
-		A4027F762C743AC000750BA3 /* ExerciseTrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4027F752C743AC000750BA3 /* ExerciseTrackerViewModel.swift */; };
-		A4027F782C743AD300750BA3 /* ExerciseTrackerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4027F772C743AD300750BA3 /* ExerciseTrackerModel.swift */; };
-		A430CDA82C7589830085946B /* ExerciseTrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDA72C7589830085946B /* ExerciseTrackerRepository.swift */; };
-		A430CDAB2C7589BF0085946B /* PersistentExerciseTrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDAA2C7589BF0085946B /* PersistentExerciseTrackerRepository.swift */; };
-		A430CDAF2C7591610085946B /* DummyExerciseTrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDAE2C7591610085946B /* DummyExerciseTrackerRepository.swift */; };
-		A430CDB32C7592630085946B /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDB22C7592630085946B /* Exercise.swift */; };
-		A430CDB52C75927C0085946B /* ExerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDB42C75927C0085946B /* ExerciseType.swift */; };
-		A430CDB92C7593990085946B /* ExerciseContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDB82C7593990085946B /* ExerciseContentView.swift */; };
-		A430CDBB2C7593AE0085946B /* ExerciseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDBA2C7593AE0085946B /* ExerciseCardView.swift */; };
-		A430CDBD2C7593E40085946B /* WideCardViewWithProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDBC2C7593E40085946B /* WideCardViewWithProgress.swift */; };
-		A430CDBF2C75942D0085946B /* WeeklyStreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430CDBE2C75942D0085946B /* WeeklyStreakView.swift */; };
+		A44A58922C77254800F8E883 /* BreathingAnimationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A588A2C77254800F8E883 /* BreathingAnimationComponent.swift */; };
+		A44A58932C77254800F8E883 /* BreathingInactiveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A588B2C77254800F8E883 /* BreathingInactiveComponent.swift */; };
+		A44A58942C77254800F8E883 /* HapticButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A588C2C77254800F8E883 /* HapticButtonComponent.swift */; };
+		A44A58952C77254800F8E883 /* MusicButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A588D2C77254800F8E883 /* MusicButtonComponent.swift */; };
+		A44A58962C77254800F8E883 /* PauseButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A588E2C77254800F8E883 /* PauseButtonComponent.swift */; };
+		A44A58972C77254800F8E883 /* PlayButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A588F2C77254800F8E883 /* PlayButtonComponent.swift */; };
+		A44A58982C77254800F8E883 /* ProgressBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58902C77254800F8E883 /* ProgressBarComponent.swift */; };
+		A44A589C2C77255600F8E883 /* BreathingAnimationComponentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58992C77255600F8E883 /* BreathingAnimationComponentExtension.swift */; };
+		A44A589D2C77255600F8E883 /* ColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A589A2C77255600F8E883 /* ColorsExtension.swift */; };
+		A44A58A22C77256800F8E883 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A589E2C77256800F8E883 /* Exercise.swift */; };
+		A44A58A32C77256800F8E883 /* ExerciseTrackerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A589F2C77256800F8E883 /* ExerciseTrackerModel.swift */; };
+		A44A58A42C77256800F8E883 /* ExerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58A02C77256800F8E883 /* ExerciseType.swift */; };
+		A44A58A72C77257700F8E883 /* AudioPlayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58A52C77257700F8E883 /* AudioPlayerProtocol.swift */; };
+		A44A58AF2C77258100F8E883 /* DummyExerciseTrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58A82C77258100F8E883 /* DummyExerciseTrackerRepository.swift */; };
+		A44A58B02C77258100F8E883 /* PersistentExerciseTrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58AA2C77258100F8E883 /* PersistentExerciseTrackerRepository.swift */; };
+		A44A58B12C77258100F8E883 /* ExerciseTrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58AC2C77258100F8E883 /* ExerciseTrackerRepository.swift */; };
+		A44A58B62C77258C00F8E883 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58B22C77258C00F8E883 /* AudioPlayerManager.swift */; };
+		A44A58B72C77258C00F8E883 /* CycleCountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58B32C77258C00F8E883 /* CycleCountManager.swift */; };
+		A44A58B82C77258C00F8E883 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58B42C77258C00F8E883 /* HapticsManager.swift */; };
+		A44A58BB2C77259500F8E883 /* ExerciseTrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58B92C77259500F8E883 /* ExerciseTrackerViewModel.swift */; };
+		A44A58C82C7725A300F8E883 /* ExerciseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58BC2C7725A300F8E883 /* ExerciseCardView.swift */; };
+		A44A58C92C7725A300F8E883 /* ExerciseContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58BD2C7725A300F8E883 /* ExerciseContentView.swift */; };
+		A44A58CA2C7725A300F8E883 /* WeeklyStreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58BE2C7725A300F8E883 /* WeeklyStreakView.swift */; };
+		A44A58CB2C7725A300F8E883 /* WideCardViewWithProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58BF2C7725A300F8E883 /* WideCardViewWithProgress.swift */; };
+		A44A58CC2C7725A300F8E883 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58C12C7725A300F8E883 /* MainView.swift */; };
+		A44A58CD2C7725A300F8E883 /* BreathingExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58C32C7725A300F8E883 /* BreathingExerciseView.swift */; };
+		A44A58CF2C7725A300F8E883 /* CongratulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58C52C7725A300F8E883 /* CongratulationView.swift */; };
+		A44A58D02C7725A300F8E883 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58C62C7725A300F8E883 /* ContentView.swift */; };
+		A44A58E02C7725CE00F8E883 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58D12C7725CE00F8E883 /* Rubik-Black.ttf */; };
+		A44A58E12C7725CE00F8E883 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58D22C7725CE00F8E883 /* Rubik-BlackItalic.ttf */; };
+		A44A58E22C7725CE00F8E883 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58D32C7725CE00F8E883 /* Rubik-Bold.ttf */; };
+		A44A58E32C7725CE00F8E883 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58D42C7725CE00F8E883 /* Rubik-BoldItalic.ttf */; };
+		A44A58E42C7725CE00F8E883 /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58D52C7725CE00F8E883 /* Rubik-ExtraBold.ttf */; };
+		A44A58E52C7725CE00F8E883 /* Rubik-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58D62C7725CE00F8E883 /* Rubik-ExtraBoldItalic.ttf */; };
+		A44A58E62C7725CE00F8E883 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58D72C7725CE00F8E883 /* Rubik-Italic.ttf */; };
+		A44A58E72C7725CE00F8E883 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58D82C7725CE00F8E883 /* Rubik-Light.ttf */; };
+		A44A58E82C7725CE00F8E883 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58D92C7725CE00F8E883 /* Rubik-LightItalic.ttf */; };
+		A44A58E92C7725CE00F8E883 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58DA2C7725CE00F8E883 /* Rubik-Medium.ttf */; };
+		A44A58EA2C7725CE00F8E883 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58DB2C7725CE00F8E883 /* Rubik-MediumItalic.ttf */; };
+		A44A58EB2C7725CE00F8E883 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58DC2C7725CE00F8E883 /* Rubik-Regular.ttf */; };
+		A44A58EC2C7725CE00F8E883 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58DD2C7725CE00F8E883 /* Rubik-SemiBold.ttf */; };
+		A44A58ED2C7725CE00F8E883 /* Rubik-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58DE2C7725CE00F8E883 /* Rubik-SemiBoldItalic.ttf */; };
+		A44A58F02C77270200F8E883 /* Buzz in Frameworks */ = {isa = PBXBuildFile; productRef = A44A58EF2C77270200F8E883 /* Buzz */; };
+		A44A58F22C77272C00F8E883 /* breathingExerciseSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A44A58F12C77272C00F8E883 /* breathingExerciseSound.mp3 */; };
+		A44A58F42C775D1600F8E883 /* BreathingSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58F32C775D1600F8E883 /* BreathingSessionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +80,6 @@
 /* Begin PBXFileReference section */
 		2BA883022C73AE45008365C8 /* Mini3-PanicAttack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini3-PanicAttack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA883052C73AE45008365C8 /* Mini3_PanicAttackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini3_PanicAttackApp.swift; sourceTree = "<group>"; };
-		2BA883072C73AE45008365C8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2BA883092C73AE46008365C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BA8830C2C73AE46008365C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2BA883122C73AE46008365C8 /* Mini3-PanicAttackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mini3-PanicAttackTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,33 +87,51 @@
 		2BA8831C2C73AE46008365C8 /* Mini3-PanicAttackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mini3-PanicAttackUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA883202C73AE46008365C8 /* Mini3_PanicAttackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini3_PanicAttackUITests.swift; sourceTree = "<group>"; };
 		2BA883222C73AE46008365C8 /* Mini3_PanicAttackUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini3_PanicAttackUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2BA883312C73B076008365C8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2BA8833D2C743281008365C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BA883402C743313008365C8 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
-		2BA883412C743313008365C8 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
-		2BA883422C743313008365C8 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
-		2BA883432C743313008365C8 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
-		2BA883442C743313008365C8 /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
-		2BA883452C743314008365C8 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
-		2BA883462C743314008365C8 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
-		2BA883472C743314008365C8 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
-		2BA883482C743314008365C8 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
-		2BA883492C743314008365C8 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
-		2BA8834A2C743314008365C8 /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		2BA8834B2C743314008365C8 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
-		2BA8834C2C743314008365C8 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
-		2BA8834D2C743314008365C8 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
-		A4027F752C743AC000750BA3 /* ExerciseTrackerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTrackerViewModel.swift; sourceTree = "<group>"; };
-		A4027F772C743AD300750BA3 /* ExerciseTrackerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTrackerModel.swift; sourceTree = "<group>"; };
-		A430CDA72C7589830085946B /* ExerciseTrackerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTrackerRepository.swift; sourceTree = "<group>"; };
-		A430CDAA2C7589BF0085946B /* PersistentExerciseTrackerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentExerciseTrackerRepository.swift; sourceTree = "<group>"; };
-		A430CDAE2C7591610085946B /* DummyExerciseTrackerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyExerciseTrackerRepository.swift; sourceTree = "<group>"; };
-		A430CDB22C7592630085946B /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
-		A430CDB42C75927C0085946B /* ExerciseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseType.swift; sourceTree = "<group>"; };
-		A430CDB82C7593990085946B /* ExerciseContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseContentView.swift; sourceTree = "<group>"; };
-		A430CDBA2C7593AE0085946B /* ExerciseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCardView.swift; sourceTree = "<group>"; };
-		A430CDBC2C7593E40085946B /* WideCardViewWithProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WideCardViewWithProgress.swift; sourceTree = "<group>"; };
-		A430CDBE2C75942D0085946B /* WeeklyStreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyStreakView.swift; sourceTree = "<group>"; };
+		A44A588A2C77254800F8E883 /* BreathingAnimationComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathingAnimationComponent.swift; sourceTree = "<group>"; };
+		A44A588B2C77254800F8E883 /* BreathingInactiveComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathingInactiveComponent.swift; sourceTree = "<group>"; };
+		A44A588C2C77254800F8E883 /* HapticButtonComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticButtonComponent.swift; sourceTree = "<group>"; };
+		A44A588D2C77254800F8E883 /* MusicButtonComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicButtonComponent.swift; sourceTree = "<group>"; };
+		A44A588E2C77254800F8E883 /* PauseButtonComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseButtonComponent.swift; sourceTree = "<group>"; };
+		A44A588F2C77254800F8E883 /* PlayButtonComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButtonComponent.swift; sourceTree = "<group>"; };
+		A44A58902C77254800F8E883 /* ProgressBarComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarComponent.swift; sourceTree = "<group>"; };
+		A44A58992C77255600F8E883 /* BreathingAnimationComponentExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathingAnimationComponentExtension.swift; sourceTree = "<group>"; };
+		A44A589A2C77255600F8E883 /* ColorsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsExtension.swift; sourceTree = "<group>"; };
+		A44A589E2C77256800F8E883 /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		A44A589F2C77256800F8E883 /* ExerciseTrackerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTrackerModel.swift; sourceTree = "<group>"; };
+		A44A58A02C77256800F8E883 /* ExerciseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseType.swift; sourceTree = "<group>"; };
+		A44A58A52C77257700F8E883 /* AudioPlayerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerProtocol.swift; sourceTree = "<group>"; };
+		A44A58A82C77258100F8E883 /* DummyExerciseTrackerRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyExerciseTrackerRepository.swift; sourceTree = "<group>"; };
+		A44A58AA2C77258100F8E883 /* PersistentExerciseTrackerRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentExerciseTrackerRepository.swift; sourceTree = "<group>"; };
+		A44A58AC2C77258100F8E883 /* ExerciseTrackerRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTrackerRepository.swift; sourceTree = "<group>"; };
+		A44A58B22C77258C00F8E883 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
+		A44A58B32C77258C00F8E883 /* CycleCountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleCountManager.swift; sourceTree = "<group>"; };
+		A44A58B42C77258C00F8E883 /* HapticsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		A44A58B92C77259500F8E883 /* ExerciseTrackerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTrackerViewModel.swift; sourceTree = "<group>"; };
+		A44A58BC2C7725A300F8E883 /* ExerciseCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseCardView.swift; sourceTree = "<group>"; };
+		A44A58BD2C7725A300F8E883 /* ExerciseContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseContentView.swift; sourceTree = "<group>"; };
+		A44A58BE2C7725A300F8E883 /* WeeklyStreakView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyStreakView.swift; sourceTree = "<group>"; };
+		A44A58BF2C7725A300F8E883 /* WideCardViewWithProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WideCardViewWithProgress.swift; sourceTree = "<group>"; };
+		A44A58C12C7725A300F8E883 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A44A58C32C7725A300F8E883 /* BreathingExerciseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathingExerciseView.swift; sourceTree = "<group>"; };
+		A44A58C52C7725A300F8E883 /* CongratulationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationView.swift; sourceTree = "<group>"; };
+		A44A58C62C7725A300F8E883 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A44A58D12C7725CE00F8E883 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		A44A58D22C7725CE00F8E883 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		A44A58D32C7725CE00F8E883 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		A44A58D42C7725CE00F8E883 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A44A58D52C7725CE00F8E883 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A44A58D62C7725CE00F8E883 /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		A44A58D72C7725CE00F8E883 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		A44A58D82C7725CE00F8E883 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		A44A58D92C7725CE00F8E883 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		A44A58DA2C7725CE00F8E883 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		A44A58DB2C7725CE00F8E883 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		A44A58DC2C7725CE00F8E883 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		A44A58DD2C7725CE00F8E883 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		A44A58DE2C7725CE00F8E883 /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		A44A58F12C77272C00F8E883 /* breathingExerciseSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = breathingExerciseSound.mp3; sourceTree = "<group>"; };
+		A44A58F32C775D1600F8E883 /* BreathingSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSessionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44A58F02C77270200F8E883 /* Buzz in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,12 +183,17 @@
 		2BA883042C73AE45008365C8 /* Mini3-PanicAttack */ = {
 			isa = PBXGroup;
 			children = (
+				A44A58DF2C7725CE00F8E883 /* Font */,
+				A44A58C72C7725A300F8E883 /* Views */,
+				A44A58BA2C77259500F8E883 /* ViewModel */,
+				A44A58B52C77258C00F8E883 /* Utils */,
+				A44A58AE2C77258100F8E883 /* Repository */,
+				A44A58A62C77257700F8E883 /* Protocols */,
+				A44A58A12C77256800F8E883 /* Model */,
+				A44A589B2C77255600F8E883 /* Extensions */,
+				A44A58912C77254800F8E883 /* Components */,
 				2BA883052C73AE45008365C8 /* Mini3_PanicAttackApp.swift */,
-				A4027F742C743AAF00750BA3 /* ViewModel */,
-				A4027F732C74372D00750BA3 /* Model */,
-				A430CDA62C7589750085946B /* Repository */,
-				2BA8833E2C7432BB008365C8 /* Views */,
-				2BA8833F2C7432FF008365C8 /* Font */,
+				A44A58F12C77272C00F8E883 /* breathingExerciseSound.mp3 */,
 				2BA883092C73AE46008365C8 /* Assets.xcassets */,
 				2BA8833D2C743281008365C8 /* Info.plist */,
 				2BA8830B2C73AE46008365C8 /* Preview Content */,
@@ -185,106 +226,158 @@
 			path = "Mini3-PanicAttackUITests";
 			sourceTree = "<group>";
 		};
-		2BA8833E2C7432BB008365C8 /* Views */ = {
+		A44A58912C77254800F8E883 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2BA883072C73AE45008365C8 /* ContentView.swift */,
-				A430CDB62C7593320085946B /* Main */,
+				A44A588A2C77254800F8E883 /* BreathingAnimationComponent.swift */,
+				A44A588B2C77254800F8E883 /* BreathingInactiveComponent.swift */,
+				A44A588C2C77254800F8E883 /* HapticButtonComponent.swift */,
+				A44A588D2C77254800F8E883 /* MusicButtonComponent.swift */,
+				A44A588E2C77254800F8E883 /* PauseButtonComponent.swift */,
+				A44A588F2C77254800F8E883 /* PlayButtonComponent.swift */,
+				A44A58902C77254800F8E883 /* ProgressBarComponent.swift */,
 			);
-			path = Views;
+			path = Components;
 			sourceTree = "<group>";
 		};
-		2BA8833F2C7432FF008365C8 /* Font */ = {
+		A44A589B2C77255600F8E883 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2BA883482C743314008365C8 /* Rubik-Black.ttf */,
-				2BA883422C743313008365C8 /* Rubik-BlackItalic.ttf */,
-				2BA8834D2C743314008365C8 /* Rubik-Bold.ttf */,
-				2BA883462C743314008365C8 /* Rubik-BoldItalic.ttf */,
-				2BA883402C743313008365C8 /* Rubik-ExtraBold.ttf */,
-				2BA8834A2C743314008365C8 /* Rubik-ExtraBoldItalic.ttf */,
-				2BA883492C743314008365C8 /* Rubik-Italic.ttf */,
-				2BA883452C743314008365C8 /* Rubik-Light.ttf */,
-				2BA8834B2C743314008365C8 /* Rubik-LightItalic.ttf */,
-				2BA8834C2C743314008365C8 /* Rubik-Medium.ttf */,
-				2BA883412C743313008365C8 /* Rubik-MediumItalic.ttf */,
-				2BA883432C743313008365C8 /* Rubik-Regular.ttf */,
-				2BA883472C743314008365C8 /* Rubik-SemiBold.ttf */,
-				2BA883442C743313008365C8 /* Rubik-SemiBoldItalic.ttf */,
+				A44A58992C77255600F8E883 /* BreathingAnimationComponentExtension.swift */,
+				A44A589A2C77255600F8E883 /* ColorsExtension.swift */,
 			);
-			path = Font;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		A4027F732C74372D00750BA3 /* Model */ = {
+		A44A58A12C77256800F8E883 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A430CDB22C7592630085946B /* Exercise.swift */,
-				A430CDB42C75927C0085946B /* ExerciseType.swift */,
-				A4027F772C743AD300750BA3 /* ExerciseTrackerModel.swift */,
+				A44A589E2C77256800F8E883 /* Exercise.swift */,
+				A44A589F2C77256800F8E883 /* ExerciseTrackerModel.swift */,
+				A44A58A02C77256800F8E883 /* ExerciseType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A4027F742C743AAF00750BA3 /* ViewModel */ = {
+		A44A58A62C77257700F8E883 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				A4027F752C743AC000750BA3 /* ExerciseTrackerViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		A430CDA62C7589750085946B /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				A430CDAD2C758D710085946B /* Dummy */,
-				A430CDAC2C758D5C0085946B /* Persistent */,
-				A430CDA92C7589B10085946B /* Protocols */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		A430CDA92C7589B10085946B /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				A430CDA72C7589830085946B /* ExerciseTrackerRepository.swift */,
+				A44A58A52C77257700F8E883 /* AudioPlayerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		A430CDAC2C758D5C0085946B /* Persistent */ = {
+		A44A58A92C77258100F8E883 /* Dummy */ = {
 			isa = PBXGroup;
 			children = (
-				A430CDAA2C7589BF0085946B /* PersistentExerciseTrackerRepository.swift */,
-			);
-			path = Persistent;
-			sourceTree = "<group>";
-		};
-		A430CDAD2C758D710085946B /* Dummy */ = {
-			isa = PBXGroup;
-			children = (
-				A430CDAE2C7591610085946B /* DummyExerciseTrackerRepository.swift */,
+				A44A58A82C77258100F8E883 /* DummyExerciseTrackerRepository.swift */,
 			);
 			path = Dummy;
 			sourceTree = "<group>";
 		};
-		A430CDB62C7593320085946B /* Main */ = {
+		A44A58AB2C77258100F8E883 /* Persistent */ = {
 			isa = PBXGroup;
 			children = (
-				A430CDB72C7593700085946B /* Components */,
-				2BA883312C73B076008365C8 /* MainView.swift */,
+				A44A58AA2C77258100F8E883 /* PersistentExerciseTrackerRepository.swift */,
+			);
+			path = Persistent;
+			sourceTree = "<group>";
+		};
+		A44A58AD2C77258100F8E883 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A44A58AC2C77258100F8E883 /* ExerciseTrackerRepository.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A44A58AE2C77258100F8E883 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A44A58A92C77258100F8E883 /* Dummy */,
+				A44A58AB2C77258100F8E883 /* Persistent */,
+				A44A58AD2C77258100F8E883 /* Protocols */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A44A58B52C77258C00F8E883 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A44A58B22C77258C00F8E883 /* AudioPlayerManager.swift */,
+				A44A58B32C77258C00F8E883 /* CycleCountManager.swift */,
+				A44A58B42C77258C00F8E883 /* HapticsManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A44A58BA2C77259500F8E883 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A44A58B92C77259500F8E883 /* ExerciseTrackerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A44A58C02C7725A300F8E883 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A44A58BC2C7725A300F8E883 /* ExerciseCardView.swift */,
+				A44A58BD2C7725A300F8E883 /* ExerciseContentView.swift */,
+				A44A58BE2C7725A300F8E883 /* WeeklyStreakView.swift */,
+				A44A58BF2C7725A300F8E883 /* WideCardViewWithProgress.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A44A58C22C7725A300F8E883 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A44A58C02C7725A300F8E883 /* Components */,
+				A44A58C12C7725A300F8E883 /* MainView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		A430CDB72C7593700085946B /* Components */ = {
+		A44A58C72C7725A300F8E883 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A430CDB82C7593990085946B /* ExerciseContentView.swift */,
-				A430CDBA2C7593AE0085946B /* ExerciseCardView.swift */,
-				A430CDBC2C7593E40085946B /* WideCardViewWithProgress.swift */,
-				A430CDBE2C75942D0085946B /* WeeklyStreakView.swift */,
+				A44A58C62C7725A300F8E883 /* ContentView.swift */,
+				A44A58C52C7725A300F8E883 /* CongratulationView.swift */,
+				A44A58F52C775D5300F8E883 /* Breathing */,
+				A44A58C22C7725A300F8E883 /* Main */,
 			);
-			path = Components;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A44A58DF2C7725CE00F8E883 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A44A58D12C7725CE00F8E883 /* Rubik-Black.ttf */,
+				A44A58D22C7725CE00F8E883 /* Rubik-BlackItalic.ttf */,
+				A44A58D32C7725CE00F8E883 /* Rubik-Bold.ttf */,
+				A44A58D42C7725CE00F8E883 /* Rubik-BoldItalic.ttf */,
+				A44A58D52C7725CE00F8E883 /* Rubik-ExtraBold.ttf */,
+				A44A58D62C7725CE00F8E883 /* Rubik-ExtraBoldItalic.ttf */,
+				A44A58D72C7725CE00F8E883 /* Rubik-Italic.ttf */,
+				A44A58D82C7725CE00F8E883 /* Rubik-Light.ttf */,
+				A44A58D92C7725CE00F8E883 /* Rubik-LightItalic.ttf */,
+				A44A58DA2C7725CE00F8E883 /* Rubik-Medium.ttf */,
+				A44A58DB2C7725CE00F8E883 /* Rubik-MediumItalic.ttf */,
+				A44A58DC2C7725CE00F8E883 /* Rubik-Regular.ttf */,
+				A44A58DD2C7725CE00F8E883 /* Rubik-SemiBold.ttf */,
+				A44A58DE2C7725CE00F8E883 /* Rubik-SemiBoldItalic.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		A44A58F52C775D5300F8E883 /* Breathing */ = {
+			isa = PBXGroup;
+			children = (
+				A44A58F32C775D1600F8E883 /* BreathingSessionView.swift */,
+				A44A58C32C7725A300F8E883 /* BreathingExerciseView.swift */,
+			);
+			path = Breathing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +396,9 @@
 			dependencies = (
 			);
 			name = "Mini3-PanicAttack";
+			packageProductDependencies = (
+				A44A58EF2C77270200F8E883 /* Buzz */,
+			);
 			productName = "Mini3-PanicAttack";
 			productReference = 2BA883022C73AE45008365C8 /* Mini3-PanicAttack.app */;
 			productType = "com.apple.product-type.application";
@@ -375,6 +471,9 @@
 				Base,
 			);
 			mainGroup = 2BA882F92C73AE45008365C8;
+			packageReferences = (
+				A44A58EE2C77270200F8E883 /* XCRemoteSwiftPackageReference "buzz" */,
+			);
 			productRefGroup = 2BA883032C73AE45008365C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -391,21 +490,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BA8835C2C743470008365C8 /* Rubik-Medium.ttf in Resources */,
-				2BA8835D2C743470008365C8 /* Rubik-ExtraBoldItalic.ttf in Resources */,
-				2BA8835E2C743470008365C8 /* Rubik-SemiBold.ttf in Resources */,
-				2BA8835F2C743470008365C8 /* Rubik-Black.ttf in Resources */,
-				2BA883602C743470008365C8 /* Rubik-Italic.ttf in Resources */,
-				2BA883612C743470008365C8 /* Rubik-MediumItalic.ttf in Resources */,
-				2BA883622C743470008365C8 /* Rubik-Bold.ttf in Resources */,
-				2BA883632C743470008365C8 /* Rubik-BlackItalic.ttf in Resources */,
-				2BA883642C743470008365C8 /* Rubik-BoldItalic.ttf in Resources */,
-				2BA883652C743470008365C8 /* Rubik-Regular.ttf in Resources */,
-				2BA883662C743470008365C8 /* Rubik-Light.ttf in Resources */,
-				2BA883672C743470008365C8 /* Rubik-LightItalic.ttf in Resources */,
-				2BA883682C743470008365C8 /* Rubik-SemiBoldItalic.ttf in Resources */,
-				2BA883692C743470008365C8 /* Rubik-ExtraBold.ttf in Resources */,
+				A44A58E22C7725CE00F8E883 /* Rubik-Bold.ttf in Resources */,
+				A44A58F22C77272C00F8E883 /* breathingExerciseSound.mp3 in Resources */,
+				A44A58EB2C7725CE00F8E883 /* Rubik-Regular.ttf in Resources */,
+				A44A58E62C7725CE00F8E883 /* Rubik-Italic.ttf in Resources */,
+				A44A58E02C7725CE00F8E883 /* Rubik-Black.ttf in Resources */,
+				A44A58E12C7725CE00F8E883 /* Rubik-BlackItalic.ttf in Resources */,
+				A44A58E32C7725CE00F8E883 /* Rubik-BoldItalic.ttf in Resources */,
+				A44A58E92C7725CE00F8E883 /* Rubik-Medium.ttf in Resources */,
+				A44A58EC2C7725CE00F8E883 /* Rubik-SemiBold.ttf in Resources */,
+				A44A58E72C7725CE00F8E883 /* Rubik-Light.ttf in Resources */,
+				A44A58E82C7725CE00F8E883 /* Rubik-LightItalic.ttf in Resources */,
+				A44A58EA2C7725CE00F8E883 /* Rubik-MediumItalic.ttf in Resources */,
 				2BA8830D2C73AE46008365C8 /* Preview Assets.xcassets in Resources */,
+				A44A58E42C7725CE00F8E883 /* Rubik-ExtraBold.ttf in Resources */,
+				A44A58ED2C7725CE00F8E883 /* Rubik-SemiBoldItalic.ttf in Resources */,
+				A44A58E52C7725CE00F8E883 /* Rubik-ExtraBoldItalic.ttf in Resources */,
 				2BA8830A2C73AE46008365C8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,20 +531,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4027F782C743AD300750BA3 /* ExerciseTrackerModel.swift in Sources */,
-				A430CDBF2C75942D0085946B /* WeeklyStreakView.swift in Sources */,
-				A430CDB52C75927C0085946B /* ExerciseType.swift in Sources */,
-				A430CDBB2C7593AE0085946B /* ExerciseCardView.swift in Sources */,
-				2BA883322C73B076008365C8 /* MainView.swift in Sources */,
-				A430CDAF2C7591610085946B /* DummyExerciseTrackerRepository.swift in Sources */,
-				A4027F762C743AC000750BA3 /* ExerciseTrackerViewModel.swift in Sources */,
-				A430CDBD2C7593E40085946B /* WideCardViewWithProgress.swift in Sources */,
-				2BA883082C73AE45008365C8 /* ContentView.swift in Sources */,
-				A430CDAB2C7589BF0085946B /* PersistentExerciseTrackerRepository.swift in Sources */,
+				A44A589C2C77255600F8E883 /* BreathingAnimationComponentExtension.swift in Sources */,
+				A44A58962C77254800F8E883 /* PauseButtonComponent.swift in Sources */,
+				A44A58A22C77256800F8E883 /* Exercise.swift in Sources */,
+				A44A58B12C77258100F8E883 /* ExerciseTrackerRepository.swift in Sources */,
+				A44A58CD2C7725A300F8E883 /* BreathingExerciseView.swift in Sources */,
+				A44A58D02C7725A300F8E883 /* ContentView.swift in Sources */,
+				A44A58CB2C7725A300F8E883 /* WideCardViewWithProgress.swift in Sources */,
+				A44A58CA2C7725A300F8E883 /* WeeklyStreakView.swift in Sources */,
+				A44A58CC2C7725A300F8E883 /* MainView.swift in Sources */,
+				A44A58982C77254800F8E883 /* ProgressBarComponent.swift in Sources */,
 				2BA883062C73AE45008365C8 /* Mini3_PanicAttackApp.swift in Sources */,
-				A430CDA82C7589830085946B /* ExerciseTrackerRepository.swift in Sources */,
-				A430CDB32C7592630085946B /* Exercise.swift in Sources */,
-				A430CDB92C7593990085946B /* ExerciseContentView.swift in Sources */,
+				A44A58922C77254800F8E883 /* BreathingAnimationComponent.swift in Sources */,
+				A44A58BB2C77259500F8E883 /* ExerciseTrackerViewModel.swift in Sources */,
+				A44A58AF2C77258100F8E883 /* DummyExerciseTrackerRepository.swift in Sources */,
+				A44A58A42C77256800F8E883 /* ExerciseType.swift in Sources */,
+				A44A58942C77254800F8E883 /* HapticButtonComponent.swift in Sources */,
+				A44A58B62C77258C00F8E883 /* AudioPlayerManager.swift in Sources */,
+				A44A58A72C77257700F8E883 /* AudioPlayerProtocol.swift in Sources */,
+				A44A58B72C77258C00F8E883 /* CycleCountManager.swift in Sources */,
+				A44A58932C77254800F8E883 /* BreathingInactiveComponent.swift in Sources */,
+				A44A58A32C77256800F8E883 /* ExerciseTrackerModel.swift in Sources */,
+				A44A58972C77254800F8E883 /* PlayButtonComponent.swift in Sources */,
+				A44A58C92C7725A300F8E883 /* ExerciseContentView.swift in Sources */,
+				A44A58B02C77258100F8E883 /* PersistentExerciseTrackerRepository.swift in Sources */,
+				A44A58F42C775D1600F8E883 /* BreathingSessionView.swift in Sources */,
+				A44A58952C77254800F8E883 /* MusicButtonComponent.swift in Sources */,
+				A44A58B82C77258C00F8E883 /* HapticsManager.swift in Sources */,
+				A44A58C82C7725A300F8E883 /* ExerciseCardView.swift in Sources */,
+				2BA883062C73AE45008365C8 /* Mini3_PanicAttackApp.swift in Sources */,
+				A44A58CF2C7725A300F8E883 /* CongratulationView.swift in Sources */,
+				A44A589D2C77255600F8E883 /* ColorsExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,6 +897,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A44A58EE2C77270200F8E883 /* XCRemoteSwiftPackageReference "buzz" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jiachenyee/buzz";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A44A58EF2C77270200F8E883 /* Buzz */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A44A58EE2C77270200F8E883 /* XCRemoteSwiftPackageReference "buzz" */;
+			productName = Buzz;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2BA882FA2C73AE45008365C8 /* Project object */;
 }
