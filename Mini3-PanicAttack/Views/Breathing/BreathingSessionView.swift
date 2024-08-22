@@ -140,7 +140,6 @@ struct BreathingSessionView: View {
                 dismiss()
             }
         }
-        .ignoresSafeArea()
         .backgroundStyle(.neutral100)
     }
 }
