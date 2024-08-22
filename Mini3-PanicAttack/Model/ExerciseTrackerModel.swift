@@ -47,7 +47,7 @@ enum StreakType: String, CaseIterable, Codable, Hashable {
     
     
 
-    init(lastExercise: ExerciseType = .visualizing, freezeStreakCount: Int = 2, dailyStreaks: [DailyStreak] = []) {
+    init(lastExercise: ExerciseType = .visualizing, freezeStreakCount: Int = 4, dailyStreaks: [DailyStreak] = []) {
         self.lastExercise = lastExercise
         self.freezeStreakCount = freezeStreakCount
         self.dailyStreaks = dailyStreaks
@@ -137,7 +137,6 @@ extension ExerciseTracker {
             // Loop through everyday by decrementing day until outside of week
             // Check through the array if date is same
             if calendar.isDate(currentDay, equalTo: sortedStreaks[idx].date, toGranularity: .day) {
-                print(idx, subStreak.count, sortedStreaks[idx])
                 subStreak.append(sortedStreaks[idx])
                 
                 // Decrement idx if found
@@ -147,21 +146,20 @@ extension ExerciseTracker {
             } else {
                 // Add to streakData if above min
                 if subStreak.count >= min {
-                    print("appending: \(subStreak.count)")
                     streakData.append(contentsOf: subStreak)
                 }
                 // Reset subStreak
                 subStreak = []
             }
             
-            // Add to streakData if above min
-            if subStreak.count >= min {
-                print("appending: \(subStreak.count)")
-                streakData.append(contentsOf: subStreak)
-            }
-            
             // Decrement to they day before
             currentDay = calendar.date(byAdding: .day, value: -1, to: currentDay)!
+        }
+        
+        
+        // Add to streakData if above min
+        if subStreak.count >= min {
+            streakData.append(contentsOf: subStreak)
         }
         
         return streakData

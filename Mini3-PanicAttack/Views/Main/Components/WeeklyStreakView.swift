@@ -10,11 +10,11 @@ import SwiftUI
 struct WeeklyStreakView: View {
     @State var viewModel: ExerciseTrackerViewModel
     @State var validStreaks: [DailyStreak] = []
-    private var validMin: Int = 2
+    private var validMin: Int = 3
     
     init(viewModel: ExerciseTrackerViewModel) {
         self.viewModel = viewModel
-        self.validStreaks = viewModel.tracker?.getStreakData(min: validMin) ?? []
+        self.validStreaks = []
     }
     
     var body: some View {

@@ -42,7 +42,7 @@ struct MainView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: 20)
-                            Text("\(viewModel.tracker?.currentStreak(min: 2) ?? -1)")
+                            Text("\(viewModel.tracker?.currentStreak(min: 3) ?? -1)")
                             
                             // MARK: - Divider
                             Text("|")
@@ -144,6 +144,11 @@ struct MainView: View {
     
 //     Auto freeze streak
     vm.autoFreezeStreaks()
+//    print("LEN: \(vm.tracker?.dailyStreaks.count)")
+    
+//    let data = vm.tracker?.getStreakData(min: 3)
+//    print(data)
+//    print(data?.count)
     
     return MainView()
         .modelContainer(container).modelContainer(container)
