@@ -22,19 +22,20 @@ class ExerciseTrackerViewModel {
         
         /* Change the repository type below to use SwiftData, don't forget to change config */
         
-//        self.repository = PersistentExerciseTrackerRepository(modelContext: modelContext)
-        self.repository = InMemoryExerciseTrackerRepository()
+        self.repository = PersistentExerciseTrackerRepository(modelContext: modelContext)
+//        self.repository = InMemoryExerciseTrackerRepository()
         
         load()
+    }
+
+    func isTodaysExercise(of exercise: ExerciseType) -> Bool {
+        return todaysExercise?.type == exercise
     }
     
     func load() {
         do {
             if let tracker = try repository.fetchExerciseTracker() {
                 self.tracker = tracker
-//                print("Fetch successful: (\(tracker.longestStreak) streak)")
-//                print("lastExercise: \(self.tracker?.lastExercise.title ?? "?")")
-//                print("todaysExercise: \(self.todaysExercise?.type.title ?? "?")")
             } else {
                 let singletonTracker = try repository.insertDefaultExerciseTracker()
                 self.tracker = singletonTracker
@@ -42,13 +43,16 @@ class ExerciseTrackerViewModel {
             
             // Set today's exercise based on last finished exercise
             self.todaysExercise = Exercise(type: tracker?.lastExercise.getNext() ?? .breathing, progress: 0)
+            
+            // If end of month add freezeStreakCount
+            // TODO: Fix this, to add freeze streak at the end of month
+//            self.refreshFreezeStreak()
+            
         } catch {
             print("Fetch failed: \(error)")
         }
     }
-
     
-    // Used for previews (randomizes data)
     func loadDummyData() {
         guard let tracker = self.tracker else { return }
         
@@ -61,13 +65,10 @@ class ExerciseTrackerViewModel {
             let dayDate = calendar.date(byAdding: .day, value: i, to: startOfWeek)!
             
             // Randomly decide if the user exercised or used a freeze streak
-            let exercised = Bool.random()
-            let froze = Bool.random()
+            let randomStreakType: StreakType = StreakType.random()
             
-            if exercised {
-                tracker.daysExercised.append(dayDate)
-            } else if froze {
-                tracker.freezeStreakDays.append(dayDate)
+            if !(randomStreakType == .skipped) {
+                tracker.dailyStreaks.append(DailyStreak(date: dayDate, streakType: randomStreakType))
             }
         }
         
@@ -80,117 +81,159 @@ class ExerciseTrackerViewModel {
             print("Error saving dummy data: \(error)")
         }
     }
-
-    func isTodaysExercise(of type: ExerciseType) -> Bool {
-        guard let todaysExercise = self.todaysExercise else { return false }
-        return todaysExercise.type == type
-    }
-
-    func setTodaysExerciseProgress(_ progress: Int) {
-        guard var safeTodaysExercise = self.todaysExercise else { return }
-        
-        safeTodaysExercise.progress = progress
-        
-        if safeTodaysExercise.progress >= 100 {
-            markCurrentExerciseAsComplete()
-        }
-    }
-
-    // MARK: - Freeze Streaks
-
-    // Method to consume a freeze streak
-    func consumeFreezeStreak() {
-        guard let tracker = self.tracker else { return }
-
-        let today = Calendar.current.startOfDay(for: Date())
-        
-        // Check if the freeze streak has already been consumed today
-        if !tracker.freezeStreakDays.contains(where: { $0.isSameDay(as: today) }) {
-            if tracker.freezeStreakCount > 0 {
-                tracker.freezeStreakCount -= 1
-                tracker.freezeStreakDays.append(today)
-            } else {
-                print("No freeze streaks available to consume.")
-            }
-        } else {
-            print("Freeze streak already consumed today.")
-        }
-        
-        do {
-            try repository.saveExerciseTracker(tracker)
-        } catch {
-            print("Error saving freeze streak consumption: \(error)")
-        }
-    }
-
-    // Method to fill freeze streak gaps
-    func fillFreezeStreakGaps() {
+    
+    
+    func refreshFreezeStreak() {
         guard let tracker = self.tracker else { return }
         
         let calendar = Calendar.current
-        let today = calendar.startOfDay(for: Date())
+        let today = Date()
         
-        // Determine the start of the week (last Sunday)
-        let startOfWeek = calendar.date(byAdding: .day, value: -calendar.component(.weekday, from: today) + 1, to: today)!
+        // Get the components of today's date
+        let todayComponents = calendar.dateComponents([.year, .month], from: today)
         
-        // Iterate through each day from startOfWeek to today
-        var currentDate = startOfWeek
-        while currentDate <= today {
-            let isExercised = tracker.daysExercised.contains(where: { $0.isSameDay(as: currentDate) })
-            let isFrozen = tracker.freezeStreakDays.contains(where: { $0.isSameDay(as: currentDate) })
+        // Get the components of tomorrow's date
+        let tomorrowComponents = calendar.dateComponents([.year, .month], from: calendar.date(byAdding: .day, value: 1, to: today)!)
+        
+        // Check if today is the last day of the month
+        if todayComponents.year == tomorrowComponents.year && todayComponents.month == tomorrowComponents.month {
+            tracker.freezeStreakCount += 3
+        }
+        
+        // Save the updated tracker
+        do {
+            try repository.saveExerciseTracker(tracker)
+        } catch {
+            print("Error saving tracker: \(error)")
+        }
+    }
+    
+    func markTodaysAsCompleted() {
+        setTodaysProgress(to: 100)
+    }
+    
+    
+    func setTodaysProgress(to progress: Int) {
+        guard let tracker = self.tracker else { return }
+
+        // Update the progress of the current exercise
+        if var todaysExercise = self.todaysExercise {
             
-            // If the day is neither exercised nor frozen, fill the gap with a freeze streak day
-            if !isExercised && !isFrozen {
-                // Check if there are freeze streaks available to consume
-                if tracker.freezeStreakCount > 0 {
-                    tracker.freezeStreakDays.append(currentDate)
-                    tracker.freezeStreakCount -= 1
-//                    print("Filled gap for \(currentDate) as a freeze streak day.")
-                } else {
-                    print("No freeze streaks available to fill the gap for \(currentDate).")
-                }
+            // Check if the exercise is complete
+            if progress >= 100 {
+                todaysExercise.completionDate = Date()
+                
+                // Update the last exercise type for next day's exercise
+                tracker.lastExercise = todaysExercise.type
+                
+                // Add a new daily streak entry
+                let calendar = Calendar.current
+                let today = calendar.startOfDay(for: Date())
+                tracker.dailyStreaks.append(DailyStreak(date: today, streakType: .exercise))
+                
+                todaysExercise.progress = 100
+                self.todaysExercise?.progress = 100
+                
+            } else {
+                todaysExercise.progress = progress
+                self.todaysExercise?.progress = progress
             }
             
-            // Move to the next day
+            // Save the updated exercise
+            do {
+                try repository.saveExerciseTracker(tracker)
+            } catch {
+                print("Error saving exercise: \(error)")
+            }
+            
+//            // Update the current exercise if it's already completed or if it's not the same as the previous one
+//            if todaysExercise.isCompleted || (tracker.lastExercise != todaysExercise.type) {
+//                self.todaysExercise = Exercise(type: tracker.lastExercise, progress: 0)
+//            }
+//            
+            // Save the updated tracker
+            do {
+                try repository.saveExerciseTracker(tracker)
+            } catch {
+                print("Error saving tracker: \(error)")
+            }
+        }
+    }
+    
+    
+    func consumeFreezeStreak(for date: Date) {
+        guard let tracker = self.tracker else { return }
+
+        // Get the calendar to work with dates
+        let calendar = Calendar.current
+
+        // Convert the given date to start of day
+        let dayDate = calendar.startOfDay(for: date)
+
+        // Check if there is already an entry for this day in dailyStreaks
+        if let existingStreak = tracker.dailyStreaks.first(where: { calendar.startOfDay(for: $0.date) == dayDate }) {
+            // If the existing streak is of type .skipped, update it to .frozen
+            print("Unable to freeze streak for: \(existingStreak.date) of type \(existingStreak.streakType)")
+        } else {
+            // If no entry exists, create a new one with type .frozen
+            tracker.dailyStreaks.append(DailyStreak(date: dayDate, streakType: .frozen))
+        }
+
+        // Save the updated tracker
+        do {
+            try repository.saveExerciseTracker(tracker)
+        } catch {
+            print("Error saving tracker: \(error)")
+        }
+    }
+    
+    func autoFreezeStreaks() {
+        guard let tracker = self.tracker else { return }
+
+        // Determine start and end of week (last Sunday and next Saturday)
+        let calendar = Calendar.current
+        let today = Date()
+        let todayStartOfDay = calendar.startOfDay(for: today)
+        
+        var startOfWeek = calendar.date(byAdding: .day, value: -calendar.component(.weekday, from: today) + 1, to: today)!
+        
+        // Set time to start of day (morning)
+        startOfWeek = calendar.startOfDay(for: startOfWeek)
+
+        // Determine end of week (next Saturday)
+        var endOfWeek = calendar.date(byAdding: .day, value: 6, to: startOfWeek)!
+        
+        // Set time to end of day (tonight)
+        endOfWeek = calendar.date(byAdding: .second, value: -1, to: calendar.date(byAdding: .day, value: 1, to: endOfWeek)!)!
+
+        // Generate all days in the week
+        var allDaysInWeek: [Date] = []
+        var currentDate = startOfWeek
+        while currentDate <= endOfWeek {
+            allDaysInWeek.append(calendar.startOfDay(for: currentDate))
             currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
         }
+
+        // Find empty days in the week before today's start of day
+        let emptyDays = allDaysInWeek.filter { day in
+            !tracker.dailyStreaks.contains(where: { calendar.startOfDay(for: $0.date) == day }) && calendar.startOfDay(for: day) < todayStartOfDay
+        }
         
+        // Append new entries with type .frozen for empty days
+        for day in emptyDays {
+            if tracker.freezeStreakCount <= 0 {
+                break
+            }
+            
+            tracker.dailyStreaks.append(DailyStreak(date: day, streakType: .frozen))
+            tracker.freezeStreakCount -= 1 
+        }
+
+        // Save the updated tracker
         do {
             try repository.saveExerciseTracker(tracker)
         } catch {
-            print("Error saving freeze streak gaps: \(error)")
-        }
-    }
-
-    // Method to check if the user can use a freeze streak
-    func canUseFreezeStreak() -> Bool {
-        return tracker?.freezeStreakCount ?? 0 > 0
-    }
-
-    func markCurrentExerciseAsComplete() {
-        guard let tracker = self.tracker, let _ = self.todaysExercise else { return }
-        
-        // Update today's exercise
-        self.todaysExercise?.progress = 100
-        self.todaysExercise?.completionDate = Date()
-        
-        // Update the last exercise type
-        tracker.lastExercise = self.todaysExercise?.type ?? .visualizing
-        
-        // Update the days exercised array
-        let today = Calendar.current.startOfDay(for: Date())
-        if !tracker.daysExercised.contains(where: { day in
-            let dayComponents = Calendar.current.dateComponents([.year, .month, .day], from: day)
-            let todayComponents = Calendar.current.dateComponents([.year, .month, .day], from: today)
-            return dayComponents == todayComponents
-        }) {
-            tracker.daysExercised.append(today)
-        }
-        
-        do {
-            try repository.saveExerciseTracker(tracker)
-        } catch {
-            print("Error saving exercise completion: \(error)")
+            print("Error saving tracker: \(error)")
         }
     }
 }

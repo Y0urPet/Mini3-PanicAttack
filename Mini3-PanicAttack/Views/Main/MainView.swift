@@ -42,7 +42,7 @@ struct MainView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: 20)
-                            Text("\(viewModel.tracker?.currentStreak ?? -1) / \(viewModel.tracker?.longestStreak ?? -1)")
+                            Text("\(viewModel.tracker?.currentStreak ?? -1)")
                             
                             // MARK: - Divider
                             Text("|")
@@ -136,12 +136,23 @@ struct MainView: View {
     
     let vm = ExerciseTrackerViewModel(modelContext: context)
     
-    vm.loadDummyData()
-    vm.fillFreezeStreakGaps()
+    // Load data
+//    vm.loadDummyData()
     
-
+    // Sets to 100%
+//    vm.setTodaysProgress(to: 100)
+    
+//     Auto freeze streak
+    vm.autoFreezeStreaks()
+    
+//    print("len", vm.tracker?.dailyStreaks.count)
+    
+    
+    
+    // Print dailyStreaks
+//    print(vm.tracker?.dailyStreaks)
+    
     return MainView()
         .modelContainer(container).modelContainer(container)
         .environment(vm)
-    
 }

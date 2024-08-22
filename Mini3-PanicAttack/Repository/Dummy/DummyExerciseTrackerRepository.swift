@@ -31,7 +31,7 @@ class InMemoryExerciseTrackerRepository: ExerciseTrackerRepository {
     }
 
     func insertDefaultExerciseTracker() -> ExerciseTracker {
-        let singletonTracker = ExerciseTracker(lastExercise: .visualizing, daysExercised: [])
+        let singletonTracker = ExerciseTracker(lastExercise: .visualizing, dailyStreaks: [])
         return singletonTracker
     }
 }

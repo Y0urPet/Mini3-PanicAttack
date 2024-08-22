@@ -218,9 +218,9 @@
 		A4027F732C74372D00750BA3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A4027F772C743AD300750BA3 /* ExerciseTrackerModel.swift */,
 				A430CDB22C7592630085946B /* Exercise.swift */,
 				A430CDB42C75927C0085946B /* ExerciseType.swift */,
+				A4027F772C743AD300750BA3 /* ExerciseTrackerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

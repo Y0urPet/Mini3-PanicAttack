@@ -19,15 +19,15 @@ struct ExerciseContentView: View {
             Text(exercise.type.title) // Display the title of the exercise
                 .font(.title)
                 .padding()
-
-            // Check if this exercise is today's exercise
+//
+//            // Check if this exercise is today's exercise
             if viewModel.isTodaysExercise(of: exercise.type) {
                 Text("This is today's exercise!")
                     .font(.subheadline)
                     .foregroundColor(.green)
                     .padding(.top, 5)
                 Button("Mark as completed", action: {
-                    viewModel.markCurrentExerciseAsComplete()
+                    viewModel.markTodaysAsCompleted()
                     dismiss()
                 })
             }
