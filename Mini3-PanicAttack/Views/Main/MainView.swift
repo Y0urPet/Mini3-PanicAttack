@@ -11,6 +11,7 @@ import SwiftData
 
 struct MainView: View {
     @Environment(ExerciseTrackerViewModel.self) private var viewModel: ExerciseTrackerViewModel
+    private var minimumValidStreak = 3
 
     // Every exercise is not used to keep track of progress
     // Progress defaults to 0%
@@ -37,12 +38,12 @@ struct MainView: View {
                             
                             // MARK: - Streak count
                             Text("Count:")
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.neutral500)
                             Image(.fire)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: 20)
-                            Text("\(viewModel.tracker?.currentStreak(min: 2) ?? -1)")
+                            Text("\(viewModel.tracker?.currentStreak(min: minimumValidStreak) ?? -1)")
                             
                             // MARK: - Divider
                             Text("|")
@@ -50,7 +51,7 @@ struct MainView: View {
                             
                             // MARK: - Freeze Streak
                             Text("Freeze Streak:")
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.neutral500)
                             Image(.blueFire)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
@@ -63,7 +64,7 @@ struct MainView: View {
                         
                         
                         // MARK: - Streak calendar comp.
-                        WeeklyStreakView(viewModel: viewModel)
+                        WeeklyStreakView(viewModel: viewModel, validMin: minimumValidStreak)
                             .padding(.top, 8)
                     }
                     
@@ -77,7 +78,7 @@ struct MainView: View {
                         }
                         HStack {
                             Text("Complete this practice to build your streak")
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.neutral500)
                                 .font(.system(size: 14))
                             Spacer()
                         }
@@ -97,7 +98,7 @@ struct MainView: View {
                         }
                         HStack {
                             Text("Do these steps to prepare for emergencies")
-                                .foregroundStyle(.gray)
+                                .foregroundStyle(.neutral500)
                                 .font(.system(size: 14))
                             Spacer()
                         }
@@ -124,6 +125,10 @@ struct MainView: View {
                 Color.white,
                 for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
+            .navigationBarBackButtonHidden()
+        }
+        .refreshable {
+            viewModel.load()
         }
     }
 }
@@ -139,11 +144,9 @@ struct MainView: View {
     // Load data
 //    vm.loadDummyData()
     
-    // Sets to 100%
-    vm.setTodaysProgress(to: 70)
-    
 //     Auto freeze streak
     vm.autoFreezeStreaks()
+//    print("LEN: \(vm.tracker?.dailyStreaks.count)")
     
     return MainView()
         .modelContainer(container).modelContainer(container)

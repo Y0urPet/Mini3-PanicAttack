@@ -23,9 +23,10 @@ struct WideCardViewWithProgress: View {
     }
     
     var body: some View {
-        NavigationLink(destination: ExerciseContentView(exercise: exercise)) {
+        NavigationLink(destination: exercise.type.exerciseView) {
             VStack {
                 HStack(spacing: 2) {
+                    
                     VStack(alignment: .leading, spacing: 6) {
                         Text(title)
                             .font(.system(size: 20))
@@ -34,8 +35,13 @@ struct WideCardViewWithProgress: View {
                         Text(subTitle)
                             .font(.system(size: 14))
                             .fontWeight(.regular)
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(.neutral400)
                     }
+                    .multilineTextAlignment(.leading)
+                    .padding(.trailing, 10)
+                    .padding(.leading, 5)
+                    .padding(.top, 8)
+                    
                     Spacer()
                     
                     Image(imageThumb)
@@ -43,6 +49,7 @@ struct WideCardViewWithProgress: View {
                         .aspectRatio(contentMode: .fill) // Fill the frame
                         .clipShape(.rect(cornerRadius: 8))
                         .frame(width: UIScreen.main.bounds.width/3)
+                    Spacer()
                 }
                 .padding(.horizontal, 16)
                 .padding(.vertical, 12)
@@ -50,10 +57,13 @@ struct WideCardViewWithProgress: View {
                 // Progress Bar
                 HStack(alignment: .lastTextBaseline, spacing: 12) {
                     ProgressView(value: Float(progress), total: 100)
-                    .scaleEffect(y: 1.5) // Sets ProgressView height
+                    .scaleEffect(y: 1.75) // Sets ProgressView height
+                    .tint(.primary500)
                     
                     Text("\(progress)%")
                         .font(.system(size: 10))
+                        .foregroundStyle(.neutral900)
+                
                 }
                 .padding(.horizontal)
                 .padding(.bottom, 16)
@@ -63,5 +73,9 @@ struct WideCardViewWithProgress: View {
         .frame(maxWidth: .infinity)
         }
     }
+}
+
+#Preview {
+    WideCardViewWithProgress(exercise: Exercise(type: .HALT))
 }
 

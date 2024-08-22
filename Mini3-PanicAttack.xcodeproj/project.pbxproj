@@ -39,7 +39,6 @@
 		A44A58CB2C7725A300F8E883 /* WideCardViewWithProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58BF2C7725A300F8E883 /* WideCardViewWithProgress.swift */; };
 		A44A58CC2C7725A300F8E883 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58C12C7725A300F8E883 /* MainView.swift */; };
 		A44A58CD2C7725A300F8E883 /* BreathingExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58C32C7725A300F8E883 /* BreathingExerciseView.swift */; };
-		A44A58CE2C7725A300F8E883 /* BreathingSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58C42C7725A300F8E883 /* BreathingSessionView.swift */; };
 		A44A58CF2C7725A300F8E883 /* CongratulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58C52C7725A300F8E883 /* CongratulationView.swift */; };
 		A44A58D02C7725A300F8E883 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58C62C7725A300F8E883 /* ContentView.swift */; };
 		A44A58E02C7725CE00F8E883 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58D12C7725CE00F8E883 /* Rubik-Black.ttf */; };
@@ -58,6 +57,13 @@
 		A44A58ED2C7725CE00F8E883 /* Rubik-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A44A58DE2C7725CE00F8E883 /* Rubik-SemiBoldItalic.ttf */; };
 		A44A58F02C77270200F8E883 /* Buzz in Frameworks */ = {isa = PBXBuildFile; productRef = A44A58EF2C77270200F8E883 /* Buzz */; };
 		A44A58F22C77272C00F8E883 /* breathingExerciseSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A44A58F12C77272C00F8E883 /* breathingExerciseSound.mp3 */; };
+		A44A58F42C775D1600F8E883 /* BreathingSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58F32C775D1600F8E883 /* BreathingSessionView.swift */; };
+		A44A58F82C776CCB00F8E883 /* GroundingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58F72C776CCB00F8E883 /* GroundingStartView.swift */; };
+		A44A58FA2C77864E00F8E883 /* GroundingExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58F92C77864E00F8E883 /* GroundingExerciseView.swift */; };
+		A44A58FC2C77875A00F8E883 /* GroundingSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58FB2C77875A00F8E883 /* GroundingSessionView.swift */; };
+		A44A59002C77895600F8E883 /* GenericInactiveWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A58FF2C77895600F8E883 /* GenericInactiveWave.swift */; };
+		A44A59022C7789C100F8E883 /* GenericAnimatedWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A59012C7789C100F8E883 /* GenericAnimatedWave.swift */; };
+		A44A59052C77A67B00F8E883 /* BreathingStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A59042C77A67B00F8E883 /* BreathingStartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,7 +120,6 @@
 		A44A58BF2C7725A300F8E883 /* WideCardViewWithProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WideCardViewWithProgress.swift; sourceTree = "<group>"; };
 		A44A58C12C7725A300F8E883 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A44A58C32C7725A300F8E883 /* BreathingExerciseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathingExerciseView.swift; sourceTree = "<group>"; };
-		A44A58C42C7725A300F8E883 /* BreathingSessionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathingSessionView.swift; sourceTree = "<group>"; };
 		A44A58C52C7725A300F8E883 /* CongratulationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongratulationView.swift; sourceTree = "<group>"; };
 		A44A58C62C7725A300F8E883 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A44A58D12C7725CE00F8E883 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
@@ -132,6 +137,13 @@
 		A44A58DD2C7725CE00F8E883 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
 		A44A58DE2C7725CE00F8E883 /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		A44A58F12C77272C00F8E883 /* breathingExerciseSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = breathingExerciseSound.mp3; sourceTree = "<group>"; };
+		A44A58F32C775D1600F8E883 /* BreathingSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSessionView.swift; sourceTree = "<group>"; };
+		A44A58F72C776CCB00F8E883 /* GroundingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundingStartView.swift; sourceTree = "<group>"; };
+		A44A58F92C77864E00F8E883 /* GroundingExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundingExerciseView.swift; sourceTree = "<group>"; };
+		A44A58FB2C77875A00F8E883 /* GroundingSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundingSessionView.swift; sourceTree = "<group>"; };
+		A44A58FF2C77895600F8E883 /* GenericInactiveWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInactiveWave.swift; sourceTree = "<group>"; };
+		A44A59012C7789C100F8E883 /* GenericAnimatedWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericAnimatedWave.swift; sourceTree = "<group>"; };
+		A44A59042C77A67B00F8E883 /* BreathingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingStartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,8 +195,6 @@
 		2BA883042C73AE45008365C8 /* Mini3-PanicAttack */ = {
 			isa = PBXGroup;
 			children = (
-				A44A58F12C77272C00F8E883 /* breathingExerciseSound.mp3 */,
-				A44A58DF2C7725CE00F8E883 /* Font */,
 				A44A58C72C7725A300F8E883 /* Views */,
 				A44A58BA2C77259500F8E883 /* ViewModel */,
 				A44A58B52C77258C00F8E883 /* Utils */,
@@ -192,8 +202,9 @@
 				A44A58A62C77257700F8E883 /* Protocols */,
 				A44A58A12C77256800F8E883 /* Model */,
 				A44A589B2C77255600F8E883 /* Extensions */,
-				A44A58912C77254800F8E883 /* Components */,
+				A44A58DF2C7725CE00F8E883 /* Font */,
 				2BA883052C73AE45008365C8 /* Mini3_PanicAttackApp.swift */,
+				A44A58F12C77272C00F8E883 /* breathingExerciseSound.mp3 */,
 				2BA883092C73AE46008365C8 /* Assets.xcassets */,
 				2BA8833D2C743281008365C8 /* Info.plist */,
 				2BA8830B2C73AE46008365C8 /* Preview Content */,
@@ -226,18 +237,19 @@
 			path = "Mini3-PanicAttackUITests";
 			sourceTree = "<group>";
 		};
-		A44A58912C77254800F8E883 /* Components */ = {
+		A44A58912C77254800F8E883 /* Global Components */ = {
 			isa = PBXGroup;
 			children = (
-				A44A588A2C77254800F8E883 /* BreathingAnimationComponent.swift */,
-				A44A588B2C77254800F8E883 /* BreathingInactiveComponent.swift */,
+				A44A59032C778A0400F8E883 /* Extensions */,
 				A44A588C2C77254800F8E883 /* HapticButtonComponent.swift */,
 				A44A588D2C77254800F8E883 /* MusicButtonComponent.swift */,
 				A44A588E2C77254800F8E883 /* PauseButtonComponent.swift */,
 				A44A588F2C77254800F8E883 /* PlayButtonComponent.swift */,
 				A44A58902C77254800F8E883 /* ProgressBarComponent.swift */,
+				A44A58FF2C77895600F8E883 /* GenericInactiveWave.swift */,
+				A44A59012C7789C100F8E883 /* GenericAnimatedWave.swift */,
 			);
-			path = Components;
+			path = "Global Components";
 			sourceTree = "<group>";
 		};
 		A44A589B2C77255600F8E883 /* Extensions */ = {
@@ -322,10 +334,10 @@
 		A44A58C02C7725A300F8E883 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A44A58BC2C7725A300F8E883 /* ExerciseCardView.swift */,
 				A44A58BD2C7725A300F8E883 /* ExerciseContentView.swift */,
 				A44A58BE2C7725A300F8E883 /* WeeklyStreakView.swift */,
 				A44A58BF2C7725A300F8E883 /* WideCardViewWithProgress.swift */,
+				A44A58BC2C7725A300F8E883 /* ExerciseCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -342,11 +354,12 @@
 		A44A58C72C7725A300F8E883 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A44A58C22C7725A300F8E883 /* Main */,
-				A44A58C32C7725A300F8E883 /* BreathingExerciseView.swift */,
-				A44A58C42C7725A300F8E883 /* BreathingSessionView.swift */,
-				A44A58C52C7725A300F8E883 /* CongratulationView.swift */,
 				A44A58C62C7725A300F8E883 /* ContentView.swift */,
+				A44A58C52C7725A300F8E883 /* CongratulationView.swift */,
+				A44A58912C77254800F8E883 /* Global Components */,
+				A44A58F62C776CB000F8E883 /* Grounding */,
+				A44A58F52C775D5300F8E883 /* Breathing */,
+				A44A58C22C7725A300F8E883 /* Main */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,6 +383,51 @@
 				A44A58DE2C7725CE00F8E883 /* Rubik-SemiBoldItalic.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		A44A58F52C775D5300F8E883 /* Breathing */ = {
+			isa = PBXGroup;
+			children = (
+				A44A58FD2C77893400F8E883 /* Components */,
+				A44A59042C77A67B00F8E883 /* BreathingStartView.swift */,
+				A44A58F32C775D1600F8E883 /* BreathingSessionView.swift */,
+				A44A58C32C7725A300F8E883 /* BreathingExerciseView.swift */,
+			);
+			path = Breathing;
+			sourceTree = "<group>";
+		};
+		A44A58F62C776CB000F8E883 /* Grounding */ = {
+			isa = PBXGroup;
+			children = (
+				A44A58FE2C77893E00F8E883 /* Components */,
+				A44A58F72C776CCB00F8E883 /* GroundingStartView.swift */,
+				A44A58FB2C77875A00F8E883 /* GroundingSessionView.swift */,
+				A44A58F92C77864E00F8E883 /* GroundingExerciseView.swift */,
+			);
+			path = Grounding;
+			sourceTree = "<group>";
+		};
+		A44A58FD2C77893400F8E883 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A44A588B2C77254800F8E883 /* BreathingInactiveComponent.swift */,
+				A44A588A2C77254800F8E883 /* BreathingAnimationComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A44A58FE2C77893E00F8E883 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A44A59032C778A0400F8E883 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -526,10 +584,13 @@
 				A44A589C2C77255600F8E883 /* BreathingAnimationComponentExtension.swift in Sources */,
 				A44A58962C77254800F8E883 /* PauseButtonComponent.swift in Sources */,
 				A44A58A22C77256800F8E883 /* Exercise.swift in Sources */,
+				A44A58FA2C77864E00F8E883 /* GroundingExerciseView.swift in Sources */,
 				A44A58B12C77258100F8E883 /* ExerciseTrackerRepository.swift in Sources */,
 				A44A58CD2C7725A300F8E883 /* BreathingExerciseView.swift in Sources */,
 				A44A58D02C7725A300F8E883 /* ContentView.swift in Sources */,
+				A44A58FC2C77875A00F8E883 /* GroundingSessionView.swift in Sources */,
 				A44A58CB2C7725A300F8E883 /* WideCardViewWithProgress.swift in Sources */,
+				A44A59002C77895600F8E883 /* GenericInactiveWave.swift in Sources */,
 				A44A58CA2C7725A300F8E883 /* WeeklyStreakView.swift in Sources */,
 				A44A58CC2C7725A300F8E883 /* MainView.swift in Sources */,
 				A44A58982C77254800F8E883 /* ProgressBarComponent.swift in Sources */,
@@ -539,15 +600,18 @@
 				A44A58AF2C77258100F8E883 /* DummyExerciseTrackerRepository.swift in Sources */,
 				A44A58A42C77256800F8E883 /* ExerciseType.swift in Sources */,
 				A44A58942C77254800F8E883 /* HapticButtonComponent.swift in Sources */,
-				A44A58CE2C7725A300F8E883 /* BreathingSessionView.swift in Sources */,
 				A44A58B62C77258C00F8E883 /* AudioPlayerManager.swift in Sources */,
 				A44A58A72C77257700F8E883 /* AudioPlayerProtocol.swift in Sources */,
 				A44A58B72C77258C00F8E883 /* CycleCountManager.swift in Sources */,
+				A44A59022C7789C100F8E883 /* GenericAnimatedWave.swift in Sources */,
 				A44A58932C77254800F8E883 /* BreathingInactiveComponent.swift in Sources */,
 				A44A58A32C77256800F8E883 /* ExerciseTrackerModel.swift in Sources */,
 				A44A58972C77254800F8E883 /* PlayButtonComponent.swift in Sources */,
+				A44A58F82C776CCB00F8E883 /* GroundingStartView.swift in Sources */,
 				A44A58C92C7725A300F8E883 /* ExerciseContentView.swift in Sources */,
 				A44A58B02C77258100F8E883 /* PersistentExerciseTrackerRepository.swift in Sources */,
+				A44A59052C77A67B00F8E883 /* BreathingStartView.swift in Sources */,
+				A44A58F42C775D1600F8E883 /* BreathingSessionView.swift in Sources */,
 				A44A58952C77254800F8E883 /* MusicButtonComponent.swift in Sources */,
 				A44A58B82C77258C00F8E883 /* HapticsManager.swift in Sources */,
 				A44A58C82C7725A300F8E883 /* ExerciseCardView.swift in Sources */,
@@ -722,11 +786,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini3-PanicAttack/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Kalm;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -754,11 +818,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini3-PanicAttack/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Kalm;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
