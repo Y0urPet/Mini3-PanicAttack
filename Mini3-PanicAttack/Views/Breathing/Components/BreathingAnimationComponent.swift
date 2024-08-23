@@ -43,6 +43,7 @@ struct BreathingAnimationComponent: View {
                         .font(Font.custom("Rubik-Semibold", size: 24))
                         .foregroundStyle(.white)
                 }
+                .scaleEffect(scaling)
         }
         .onAppear {
             startAnimationSequence()
