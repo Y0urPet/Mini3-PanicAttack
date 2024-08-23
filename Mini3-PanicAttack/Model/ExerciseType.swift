@@ -76,13 +76,13 @@ enum ExerciseType: Codable {
         case .grounding:
             GroundingExerciseView()
         case .HALT:
-            BreathingExerciseView()
+            HaltExerciseView()
         case .PMR:
-            BreathingExerciseView()
+            HaltExerciseView()
         case .thinking:
-            BreathingExerciseView()
+            HaltExerciseView()
         case .visualizing:
-            BreathingExerciseView()
+            HaltExerciseView()
         }
     }
     

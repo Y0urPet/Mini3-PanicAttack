@@ -25,7 +25,7 @@ struct BreathingExerciseView: View {
             
             
             else {
-                CongratulationView(exerciseTitle: "Breathing Exercise")
+                CongratulationView(exerciseType: .breathing, exerciseTitle: "Breathing Exercise")
                     .onAppear {
                         if viewModel.isTodaysExercise(of: .breathing) {
                             viewModel.markTodaysAsCompleted()
