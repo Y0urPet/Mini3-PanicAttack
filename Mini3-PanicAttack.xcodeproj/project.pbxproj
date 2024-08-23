@@ -67,6 +67,10 @@
 		A44A59072C77AC9C00F8E883 /* ExerciseIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A59062C77AC9C00F8E883 /* ExerciseIntroView.swift */; };
 		A44A590A2C77B15F00F8E883 /* MijickPopupView in Frameworks */ = {isa = PBXBuildFile; productRef = A44A59092C77B15F00F8E883 /* MijickPopupView */; };
 		A44A590D2C77B17600F8E883 /* ExitPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A590C2C77B17600F8E883 /* ExitPopupView.swift */; };
+		A44A59132C7814FC00F8E883 /* HaltExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A59122C7814FC00F8E883 /* HaltExerciseView.swift */; };
+		A44A59172C78154700F8E883 /* GenericStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A59162C78154700F8E883 /* GenericStartView.swift */; };
+		A44A591A2C7818B400F8E883 /* GenericSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A59192C7818B400F8E883 /* GenericSessionView.swift */; };
+		A44A591C2C781BD300F8E883 /* TodaysReminderPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A591B2C781BD300F8E883 /* TodaysReminderPopupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +153,10 @@
 		A44A59042C77A67B00F8E883 /* BreathingStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingStartView.swift; sourceTree = "<group>"; };
 		A44A59062C77AC9C00F8E883 /* ExerciseIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseIntroView.swift; sourceTree = "<group>"; };
 		A44A590C2C77B17600F8E883 /* ExitPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitPopupView.swift; sourceTree = "<group>"; };
+		A44A59122C7814FC00F8E883 /* HaltExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaltExerciseView.swift; sourceTree = "<group>"; };
+		A44A59162C78154700F8E883 /* GenericStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericStartView.swift; sourceTree = "<group>"; };
+		A44A59192C7818B400F8E883 /* GenericSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericSessionView.swift; sourceTree = "<group>"; };
+		A44A591B2C781BD300F8E883 /* TodaysReminderPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysReminderPopupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,14 +254,14 @@
 		A44A58912C77254800F8E883 /* Global Components */ = {
 			isa = PBXGroup;
 			children = (
-				A44A59032C778A0400F8E883 /* Extensions */,
+				A44A58FF2C77895600F8E883 /* GenericInactiveWave.swift */,
+				A44A59012C7789C100F8E883 /* GenericAnimatedWave.swift */,
 				A44A588C2C77254800F8E883 /* HapticButtonComponent.swift */,
 				A44A588D2C77254800F8E883 /* MusicButtonComponent.swift */,
 				A44A588E2C77254800F8E883 /* PauseButtonComponent.swift */,
 				A44A588F2C77254800F8E883 /* PlayButtonComponent.swift */,
 				A44A58902C77254800F8E883 /* ProgressBarComponent.swift */,
-				A44A58FF2C77895600F8E883 /* GenericInactiveWave.swift */,
-				A44A59012C7789C100F8E883 /* GenericAnimatedWave.swift */,
+				A44A59032C778A0400F8E883 /* Extensions */,
 			);
 			path = "Global Components";
 			sourceTree = "<group>";
@@ -360,13 +368,18 @@
 		A44A58C72C7725A300F8E883 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A44A59112C78145500F8E883 /* Visualization */,
+				A44A59102C78144900F8E883 /* Thinking */,
+				A44A590F2C78143C00F8E883 /* PMR */,
+				A44A590E2C78143800F8E883 /* HALT */,
 				A44A58C62C7725A300F8E883 /* ContentView.swift */,
 				A44A58C52C7725A300F8E883 /* CongratulationView.swift */,
 				A44A59062C77AC9C00F8E883 /* ExerciseIntroView.swift */,
-				A44A590B2C77B16600F8E883 /* Popups */,
-				A44A58912C77254800F8E883 /* Global Components */,
 				A44A58F62C776CB000F8E883 /* Grounding */,
 				A44A58F52C775D5300F8E883 /* Breathing */,
+				A44A590B2C77B16600F8E883 /* Popups */,
+				A44A59182C78189000F8E883 /* Generic Views */,
+				A44A58912C77254800F8E883 /* Global Components */,
 				A44A58C22C7725A300F8E883 /* Main */,
 			);
 			path = Views;
@@ -442,8 +455,47 @@
 			isa = PBXGroup;
 			children = (
 				A44A590C2C77B17600F8E883 /* ExitPopupView.swift */,
+				A44A591B2C781BD300F8E883 /* TodaysReminderPopupView.swift */,
 			);
 			path = Popups;
+			sourceTree = "<group>";
+		};
+		A44A590E2C78143800F8E883 /* HALT */ = {
+			isa = PBXGroup;
+			children = (
+				A44A59122C7814FC00F8E883 /* HaltExerciseView.swift */,
+			);
+			path = HALT;
+			sourceTree = "<group>";
+		};
+		A44A590F2C78143C00F8E883 /* PMR */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PMR;
+			sourceTree = "<group>";
+		};
+		A44A59102C78144900F8E883 /* Thinking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Thinking;
+			sourceTree = "<group>";
+		};
+		A44A59112C78145500F8E883 /* Visualization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Visualization;
+			sourceTree = "<group>";
+		};
+		A44A59182C78189000F8E883 /* Generic Views */ = {
+			isa = PBXGroup;
+			children = (
+				A44A59162C78154700F8E883 /* GenericStartView.swift */,
+				A44A59192C7818B400F8E883 /* GenericSessionView.swift */,
+			);
+			path = "Generic Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -599,6 +651,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44A59172C78154700F8E883 /* GenericStartView.swift in Sources */,
 				A44A589C2C77255600F8E883 /* BreathingAnimationComponentExtension.swift in Sources */,
 				A44A58962C77254800F8E883 /* PauseButtonComponent.swift in Sources */,
 				A44A58A22C77256800F8E883 /* Exercise.swift in Sources */,
@@ -620,6 +673,7 @@
 				A44A58A42C77256800F8E883 /* ExerciseType.swift in Sources */,
 				A44A58942C77254800F8E883 /* HapticButtonComponent.swift in Sources */,
 				A44A58B62C77258C00F8E883 /* AudioPlayerManager.swift in Sources */,
+				A44A59132C7814FC00F8E883 /* HaltExerciseView.swift in Sources */,
 				A44A58A72C77257700F8E883 /* AudioPlayerProtocol.swift in Sources */,
 				A44A58B72C77258C00F8E883 /* CycleCountManager.swift in Sources */,
 				A44A59022C7789C100F8E883 /* GenericAnimatedWave.swift in Sources */,
@@ -627,12 +681,14 @@
 				A44A58A32C77256800F8E883 /* ExerciseTrackerModel.swift in Sources */,
 				A44A58972C77254800F8E883 /* PlayButtonComponent.swift in Sources */,
 				A44A58F82C776CCB00F8E883 /* GroundingStartView.swift in Sources */,
+				A44A591C2C781BD300F8E883 /* TodaysReminderPopupView.swift in Sources */,
 				A44A58C92C7725A300F8E883 /* ExerciseContentView.swift in Sources */,
 				A44A590D2C77B17600F8E883 /* ExitPopupView.swift in Sources */,
 				A44A58B02C77258100F8E883 /* PersistentExerciseTrackerRepository.swift in Sources */,
 				A44A59052C77A67B00F8E883 /* BreathingStartView.swift in Sources */,
 				A44A58F42C775D1600F8E883 /* BreathingSessionView.swift in Sources */,
 				A44A58952C77254800F8E883 /* MusicButtonComponent.swift in Sources */,
+				A44A591A2C7818B400F8E883 /* GenericSessionView.swift in Sources */,
 				A44A58B82C77258C00F8E883 /* HapticsManager.swift in Sources */,
 				A44A58C82C7725A300F8E883 /* ExerciseCardView.swift in Sources */,
 				2BA883062C73AE45008365C8 /* Mini3_PanicAttackApp.swift in Sources */,
