@@ -26,6 +26,7 @@ struct TodaysReminderPopupView: CentrePopup {
                 .font(Font.custom("Rubik-SemiBold", size: 24))
                 .foregroundStyle(.black)
                 .padding(.bottom, 1)
+                .multilineTextAlignment(.center)
 //            Text("You are still halfway done!")
 //                .font(Font.custom("Rubik-Regular", size: 16))
 //                .foregroundStyle(.neutral500)
@@ -34,13 +35,17 @@ struct TodaysReminderPopupView: CentrePopup {
                     dismiss()
                     triggerToHome = true
                 } label: {
-                    Text("Continue")
-                        .font(Font.custom("Rubik-SemiBold", size: 17))
-                        .foregroundStyle(.white)
-                        .frame(width: UIScreen.main.bounds.width - 50, height: 48)
-                        .background(.primary600)
-                        .clipShape(.rect(cornerRadius: 53))
-                        .multilineTextAlignment(.center)
+                    HStack {
+                        Spacer()
+                        Text("Continue")
+                            .font(Font.custom("Rubik-SemiBold", size: 17))
+                            .foregroundStyle(.white)
+                            .frame(width: UIScreen.main.bounds.width - 50, height: 48)
+                            .background(.primary600)
+                            .clipShape(.rect(cornerRadius: 53))
+                            .multilineTextAlignment(.center)
+                        Spacer()
+                    }
                 }
                 .padding(3)
                 .padding(.top, 10)

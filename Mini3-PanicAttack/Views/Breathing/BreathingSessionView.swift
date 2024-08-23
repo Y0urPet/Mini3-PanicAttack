@@ -65,7 +65,7 @@ struct BreathingSessionView: View {
                             if (isPlaying) {
                                 audioManager.stop()
                             } else {
-                                audioManager.play()
+                                audioManager.playSession()
                             }
                         }, label: {
                             if(hapticIsTapped) {
@@ -78,7 +78,7 @@ struct BreathingSessionView: View {
                         if(!isPlaying) {
                             Button(action: {
                                 print("Play Tapped")
-                                audioManager.play()
+                                audioManager.playSession()
                                 isPlaying.toggle()
                                 progressBarActive.toggle()
                                 breathStateActive.toggle()

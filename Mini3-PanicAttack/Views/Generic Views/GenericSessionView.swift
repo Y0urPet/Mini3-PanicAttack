@@ -75,7 +75,7 @@ struct GenericSessionView: View {
                             if (isPlaying) {
                                 audioManager.stop()
                             } else {
-                                audioManager.play()
+                                audioManager.playSession()
                             }
                         }, label: {
                             if(hapticIsTapped) {
@@ -88,7 +88,7 @@ struct GenericSessionView: View {
                         if (!isPlaying) {
                             Button(action: {
                                 print("Play Tapped")
-                                audioManager.play()
+                                audioManager.playSession()
                                 isPlaying.toggle()
                                 Drone().play()
                             }, label: {

@@ -8,7 +8,8 @@
 import Foundation
 
 protocol AudioPlayer {
-    func play()
+    func playSession()
+    func playCongrats()
     func stop()
     func isPlaying() -> Bool
 }

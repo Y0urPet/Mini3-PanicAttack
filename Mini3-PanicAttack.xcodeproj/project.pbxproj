@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27B5F07F2C78253C00706276 /* congratsSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 27B5F07E2C78253C00706276 /* congratsSound.mp3 */; };
 		2BA883062C73AE45008365C8 /* Mini3_PanicAttackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA883052C73AE45008365C8 /* Mini3_PanicAttackApp.swift */; };
 		2BA8830A2C73AE46008365C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA883092C73AE46008365C8 /* Assets.xcassets */; };
 		2BA8830D2C73AE46008365C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA8830C2C73AE46008365C8 /* Preview Assets.xcassets */; };
@@ -91,6 +92,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27B5F07E2C78253C00706276 /* congratsSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = congratsSound.mp3; path = ../../../Downloads/congratsSound.mp3; sourceTree = "<group>"; };
 		2BA883022C73AE45008365C8 /* Mini3-PanicAttack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini3-PanicAttack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA883052C73AE45008365C8 /* Mini3_PanicAttackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini3_PanicAttackApp.swift; sourceTree = "<group>"; };
 		2BA883092C73AE46008365C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				A44A58DF2C7725CE00F8E883 /* Font */,
 				2BA883052C73AE45008365C8 /* Mini3_PanicAttackApp.swift */,
 				A44A58F12C77272C00F8E883 /* breathingExerciseSound.mp3 */,
+				27B5F07E2C78253C00706276 /* congratsSound.mp3 */,
 				2BA883092C73AE46008365C8 /* Assets.xcassets */,
 				2BA8833D2C743281008365C8 /* Info.plist */,
 				2BA8830B2C73AE46008365C8 /* Preview Content */,
@@ -615,6 +618,7 @@
 				A44A58EB2C7725CE00F8E883 /* Rubik-Regular.ttf in Resources */,
 				A44A58E62C7725CE00F8E883 /* Rubik-Italic.ttf in Resources */,
 				A44A58E02C7725CE00F8E883 /* Rubik-Black.ttf in Resources */,
+				27B5F07F2C78253C00706276 /* congratsSound.mp3 in Resources */,
 				A44A58E12C7725CE00F8E883 /* Rubik-BlackItalic.ttf in Resources */,
 				A44A58E32C7725CE00F8E883 /* Rubik-BoldItalic.ttf in Resources */,
 				A44A58E92C7725CE00F8E883 /* Rubik-Medium.ttf in Resources */,
@@ -858,7 +862,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini3-PanicAttack/Preview Content\"";
-				DEVELOPMENT_TEAM = YTWBVW7W5F;
+				DEVELOPMENT_TEAM = L27J25C3C8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini3-PanicAttack/Info.plist";
@@ -890,7 +894,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mini3-PanicAttack/Preview Content\"";
-				DEVELOPMENT_TEAM = YTWBVW7W5F;
+				DEVELOPMENT_TEAM = L27J25C3C8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mini3-PanicAttack/Info.plist";

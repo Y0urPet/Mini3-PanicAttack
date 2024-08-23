@@ -16,6 +16,7 @@ struct CongratulationView: View {
     var exerciseTitle: String
     
     @State private var triggerToHome = false
+    let audioManager = AudioPlayerManager()
     
     @Environment(\.dismiss) private var dismiss
     
@@ -68,6 +69,9 @@ struct CongratulationView: View {
         }
         .padding()
         .background(.neutral100)
+        .onAppear(perform: {
+            audioManager.playCongrats()
+        })
     }
 }
 //

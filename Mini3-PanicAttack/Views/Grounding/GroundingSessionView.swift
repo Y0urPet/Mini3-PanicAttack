@@ -84,7 +84,7 @@ struct GroundingSessionView: View {
                             if (isPlaying) {
                                 audioManager.stop()
                             } else {
-                                audioManager.play()
+                                audioManager.playSession()
                             }
                         }, label: {
                             if(hapticIsTapped) {
@@ -97,7 +97,7 @@ struct GroundingSessionView: View {
                         if (!isPlaying) {
                             Button(action: {
                                 print("Play Tapped")
-                                audioManager.play()
+                                audioManager.playSession()
                                 isPlaying.toggle()
                                 Drone().play()
                             }, label: {

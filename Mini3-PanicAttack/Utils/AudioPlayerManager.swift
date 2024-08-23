@@ -9,9 +9,23 @@ import Foundation
 import AVFoundation
 
 class AudioPlayerManager: AudioPlayer {
-    var audioPlayer: AVAudioPlayer?    
-    func play() {
+    var audioPlayer: AVAudioPlayer?
+    func playSession() {
         guard let soundpath = Bundle.main.path(forResource: "breathingExerciseSound", ofType: "mp3") else {
+            return print("error load music")
+        }
+        let soundUrl = URL(fileURLWithPath: soundpath)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: soundUrl)
+            audioPlayer?.play()
+        } catch {
+            print("Error playing sound: \(error.localizedDescription)")
+        }
+    }
+    
+    func playCongrats() {
+        guard let soundpath = Bundle.main.path(forResource: "congratsSound", ofType: "mp3") else {
             return print("error load music")
         }
         let soundUrl = URL(fileURLWithPath: soundpath)
